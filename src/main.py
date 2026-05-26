@@ -9,7 +9,8 @@ from query_processing import preprocess_query
 from indexer import build_index_from_chunks, DualIndexer
 from retriever import HybridRetriever
 from reranker import CPUReranker
-from reader import CPUReader
+# from reader import CPUReader
+from generative_reader import GenerativeReader
 
 def load_knowledge_base_fallback() -> list:
     """Fallback knowledge base nếu không có file chunks"""
@@ -43,7 +44,7 @@ def main():
     if os.path.exists(chunks_path):
         with open(chunks_path, 'r', encoding='utf-8') as f:
             chunks = json.load(f)
-        knowledge_base = [chunk["text"] for chunk in chunks]
+        knowledge_base = [f"{chunk.get('title', '')}\n{chunk['text']}" for chunk in chunks]
         print(f"Loaded {len(knowledge_base)} chunks from {chunks_path}")
     else:
         knowledge_base = load_knowledge_base_fallback()
@@ -59,7 +60,7 @@ def main():
     
     retriever = HybridRetriever(indexer, embedder, alpha=config['hyperparameters']['hybrid_alpha'])
     reranker = CPUReranker(config['models']['reranker'])
-    reader = CPUReader(config['models']['reader_qa'])
+    reader = GenerativeReader(config['models']['reader_qa'])
     
     # Đọc câu hỏi
     with open(args.input, 'r', encoding='utf-8') as f:

@@ -1,103 +1,103 @@
 UNKNOWN
+không
 UNKNOWN
-Vietnam National University, Hanoi
+chương trình đào tạo chất lượng cao
 UNKNOWN
 UNKNOWN
+bắt buộc phải
+đăng ký học lại học phần đó;
 UNKNOWN
 UNKNOWN
 UNKNOWN
+14
+25
 UNKNOWN
+không bắt buộc,
+Khoa/Viện/Bộ môn và Cố vấn học tập tư vấn,
+PĐT
 UNKNOWN
+Sau tuần đầu học kỳ,
 UNKNOWN
 UNKNOWN
 UNKNOWN
+9
 UNKNOWN
+16
 UNKNOWN
+phần mềm khác
 UNKNOWN
+Hòa Lạc, Thạch Thất, Hà Nội.
+chuẩn đầu ra
 UNKNOWN
+những sinh viên chưa dự kỳ thi chính
+điểm 0
+thang điểm 10
 UNKNOWN
-1993
+F
 UNKNOWN
 UNKNOWN
 UNKNOWN
 UNKNOWN
+2,00
+học lực yếu.
 UNKNOWN
+3,5;
+không
+dưới 1,40
 UNKNOWN
+tháng
 UNKNOWN
 UNKNOWN
 UNKNOWN
+5%
 UNKNOWN
+2,50;
 UNKNOWN
 UNKNOWN
+Trường Đại học Ngoại ngữ
+Trường Đại học Khoa học Xã hội và Nhân văn
+Trung tâm Giáo dục quốc phòng - an ninh
 UNKNOWN
 UNKNOWN
+giảng viên
+Hội đồng khoa học và đào tạo cấp khoa
 UNKNOWN
 UNKNOWN
 UNKNOWN
 UNKNOWN
+140 đến tín chỉ
+TỔ CHỨC ĐÀO TẠO
+hai
 UNKNOWN
 UNKNOWN
 UNKNOWN
 UNKNOWN
+một tháng
 UNKNOWN
 UNKNOWN
+giáo viên chủ nhiệm.
+học lực xếp loại yếu
 UNKNOWN
+25%
 UNKNOWN
 UNKNOWN
 UNKNOWN
+60%
 UNKNOWN
+hai năm
 UNKNOWN
+0,20 điểm
+thạc sĩ
 UNKNOWN
+3,60 đến 4,00
+hai
+3,20 đến 3,59
 UNKNOWN
 UNKNOWN
 UNKNOWN
+giải Ngành phù hợp
 UNKNOWN
 UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
+38,000,000 đồng/năm học
+38,000,000 đồng/năm học
+340;

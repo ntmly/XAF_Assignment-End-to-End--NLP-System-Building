@@ -1,3 +1,4 @@
+# === BẮT BUỘC (Hệ thống hiện tại - Extractive RAG) ===
 transformers==4.38.0
 sentence-transformers==2.5.1
 faiss-cpu==1.8.0
@@ -10,4 +11,14 @@ torch==2.2.1 --index-url https://download.pytorch.org/whl/cpu
 requests==2.31.0
 scikit-learn==1.4.0
 tqdm==4.66.2
-sentencepiece
+
+# === KHUYẾN NGHỊ CHO GENERATIVE RAG (Qwen, LLM nhỏ) ===
+# Dùng transformers để chạy generative model (Qwen2.5-3B-Instruct, ...)
+# accelerate: hỗ trợ device map, offload
+accelerate==0.28.0
+
+# Dùng llama-cpp-python để chạy model GGUF (tối ưu CPU, nhanh hơn)
+# Lưu ý: Có thể cần cài đặt thêm công cụ build (CMake) trên Windows
+# llama-cpp-python==0.2.56
+
+# Nếu dùng Vi-Qwen hoặc các model cần trust_remote_code, đã có transformers

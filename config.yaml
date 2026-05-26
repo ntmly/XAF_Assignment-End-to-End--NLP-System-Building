@@ -13,10 +13,12 @@ models:
   # Vẫn khai báo nhưng sẽ tắt dùng (use_reranker: false)
   reranker: "cross-encoder/ms-marco-MiniLM-L-6-v2"
   # Dùng model QA đã test đúng (score 1.0)
-  reader_qa: "letrunglinh/qa_pnc"
+  # reader_qa: "letrunglinh/qa_pnc"
+  reader_qa: "Qwen/Qwen2.5-3B-Instruct"
 
 hyperparameters:
   hybrid_alpha: 0.6
-  top_k_hybrid: 10          # tăng để dễ tìm chunk đúng
+  top_k_hybrid: 10      
   top_k_rerank: 5
-  use_reranker: false       # tắt reranker vì không hỗ trợ tiếng Việt
+  max_new_tokens: 256
+  use_reranker: false   
