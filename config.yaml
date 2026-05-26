@@ -1,0 +1,23 @@
+project_setup:
+  seed: 42
+  device: "cpu"
+  num_threads: 4
+
+data:
+  chunk_size: 150
+  chunk_overlap: 20
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+
+models:
+  dense_embedder: "sentence-transformers/all-MiniLM-L6-v2"
+  reranker: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+  reader_qa: "xlm-roberta-base-squad2"
+
+hyperparameters:
+  hybrid_alpha: 0.6
+  top_k_hybrid: 5
+  top_k_rerank: 5
+
+evaluation:
+  recall_at_k: 5
