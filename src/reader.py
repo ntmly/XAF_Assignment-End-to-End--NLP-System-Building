@@ -24,8 +24,8 @@ class CPUReader:
             score = result['score']
             
             # Lọc câu trả lời kém chất lượng
-            # if len(answer.split()) > 15 or score < 0.1:
-            #     return "UNKNOWN"
+            if result['score'] < 0.05:   # chỉ lọc điểm quá thấp, không giới hạn độ dài
+                return "UNKNOWN"
             return answer
         except Exception as e:
             print(f"QA error: {e}")
