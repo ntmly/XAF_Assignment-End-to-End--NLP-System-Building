@@ -1,0 +1,14 @@
+{
+  "advanced_full": {
+    "Exact Match (EM)" : 0.2400,
+    "F1 Score" : 0.6037
+  },
+  "faiss_only": {
+    "Exact Match (EM)" : 0.1800,
+    "F1 Score" : 0.3925
+  },
+  "dense_only": {
+    "Exact Match (EM)" : 0.2200,
+    "F1 Score" : 0.5250
+    }
+}

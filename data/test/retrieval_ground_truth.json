@@ -1,517 +1,253 @@
 [
   {
-    "question": "Học phần bắt buộc là gì?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_000",
-    "reference_answer": "Học phần có những nội dung kiến thức chính của chương trình đào tạo"
+    "question": "Mã đại học của Đại học Quốc gia Hà Nội (VNU) là gì?",
+    "answer": "Mã đại học là QH.",
+    "relevant_chunk_ids": [0]
   },
   {
-    "question": "Kết quả đánh giá học phần tự chọn tự do có tính vào điểm trung bình chung học kỳ không?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_001",
-    "reference_answer": "Không;Không tính"
+    "question": "Theo bảng xếp hạng VNUR, Đại học Quốc gia Hà Nội nhiều năm liền giữ vị trí thứ mấy?",
+    "answer": "Giữ vị trí top 1.",
+    "relevant_chunk_ids": [1]
+  },
+  {
+    "question": "Đảng và Nhà nước Việt Nam xác định vai trò của Đại học Quốc gia Hà Nội là gì đối với nền giáo dục đất nước?",
+    "answer": "Vai trò đầu tàu phát triển nền giáo dục Việt Nam.",
+    "relevant_chunk_ids": [2]
+  },
+  {
+    "question": "Tính đến thời điểm hiện tại, cựu học sinh, sinh viên của Đại học Quốc gia Hà Nội đã đạt được bao nhiêu giải thưởng Olympic quốc tế và khu vực?",
+    "answer": "323 giải thưởng Olympic quốc tế và khu vực.",
+    "relevant_chunk_ids": [3]
+  },
+  {
+    "question": "Đại học Quốc gia Hà Nội là đại học đầu tiên tại Việt Nam được trao tặng huân chương cao quý nào?",
+    "answer": "Huân chương Sao Vàng.",
+    "relevant_chunk_ids": [4]
+  },
+  {
+    "question": "Đại học Quốc gia Hà Nội là nơi khởi nguồn hình thành loại hình giáo dục nào đầu tiên của Việt Nam?",
+    "answer": "Loại hình giáo dục phổ thông chuyên đầu tiên.",
+    "relevant_chunk_ids": [5]
+  },
+  {
+    "question": "Đại học Quốc gia Hà Nội là đơn vị đầu tiên đổi mới tuyển sinh đại học bằng phương thức nào?",
+    "answer": "Phương thức đánh giá năng lực.",
+    "relevant_chunk_ids": [6]
+  },
+  {
+    "question": "Đại học Quốc gia Hà Nội là thành viên duy nhất của Việt Nam tham gia vào tổ chức quốc tế nào?",
+    "answer": "Ban điều hành Mạng lưới các trường đại học Đông Nam Á.",
+    "relevant_chunk_ids": [7]
+  },
+  {
+    "question": "Về mặt pháp lý, Đại học Quốc gia Hà Nội là đơn vị dự toán cấp mấy?",
+    "answer": "Đơn vị dự toán cấp I.",
+    "relevant_chunk_ids": [8]
+  },
+  {
+    "question": "Giám đốc Đại học Quốc gia Hà Nội do ai bổ nhiệm và miễn nhiệm?",
+    "answer": "Do Thủ tướng Chính phủ bổ nhiệm, miễn nhiệm.",
+    "relevant_chunk_ids": [9]
+  },
+  {
+    "question": "Toàn quyền Đông Dương Paul Beau ký nghị định thành lập Viện Đại học Đông Dương vào ngày tháng năm nào?",
+    "answer": "Ngày 16 tháng 5 năm 1906.",
+    "relevant_chunk_ids": [14]
+  },
+  {
+    "question": "Khi mới thành lập vào năm 1906, Viện Đại học Đông Dương gồm có mấy trường thành viên?",
+    "answer": "Gồm 5 trường thành viên.",
+    "relevant_chunk_ids": [15]
+  },
+  {
+    "question": "Sau Cách mạng tháng Tám năm 1945, cơ sở của Đại học Đông Dương được khôi phục hoạt động trở lại dưới tên gọi là gì?",
+    "answer": "Đại học Quốc gia Việt Nam.",
+    "relevant_chunk_ids": [28]
+  },
+  {
+    "question": "Chủ tịch Hồ Chí Minh đã ký sắc lệnh nào để thành lập bổ sung Ban Đại học Văn khoa vào ngày 10 tháng 10 năm 1945?",
+    "answer": "Sắc lệnh số 45/SL.",
+    "relevant_chunk_ids": [29]
+  },
+  {
+    "question": "Đại học Quốc gia Việt Nam đã tổ chức khai giảng khóa đầu tiên vào ngày tháng năm nào?",
+    "answer": "Ngày 15 tháng 11 năm 1945.",
+    "relevant_chunk_ids": [31]
+  },
+  {
+    "question": "Trường Dự bị Đại học ở Liên khu IV thành lập năm 1951 đặt tại tỉnh nào?",
+    "answer": "Đặt tại Thanh Hóa.",
+    "relevant_chunk_ids": [51]
+  },
+  {
+    "question": "Trường Đại học Tổng hợp Hà Nội được thành lập vào ngày tháng năm nào theo Quyết định số 2183/TC?",
+    "answer": "Ngày 4 tháng 6 năm 1956.",
+    "relevant_chunk_ids": [56]
+  },
+  {
+    "question": "Lớp Toán Đặc biệt đầu tiên đặt tại Khoa Toán của trường Đại học Tổng hợp Hà Nội được thành lập theo quyết định do ai ký?",
+    "answer": "Thủ tướng Phạm Văn Đồng.",
+    "relevant_chunk_ids": [60]
+  },
+  {
+    "question": "Ai là người trực tiếp làm Hiệu trưởng đầu tiên của trường Ngoại ngữ được thành lập vào tháng 3 năm 1952 tại tỉnh Tuyên Quang?",
+    "answer": "Thứ trưởng Bộ Quốc gia Giáo dục Nguyễn Khánh Toàn.",
+    "relevant_chunk_ids": [72]
+  },
+  {
+    "question": "Trường Đại học Sư phạm Ngoại ngữ Hà Nội được thành lập vào ngày tháng năm nào?",
+    "answer": "Ngày 14 tháng 8 năm 1967.",
+    "relevant_chunk_ids": [83]
+  },
+  {
+    "question": "Theo Nghị định số 97/CP ngày 10 tháng 12 năm 1993, Đại học Quốc gia Hà Nội được tổ chức lại trên cơ sở sáp nhập bao nhiêu trường đại học trọng điểm?",
+    "answer": "Sáp nhập ba trường đại học trọng điểm.",
+    "relevant_chunk_ids": [94]
+  },
+  {
+    "question": "Trường Đại học Công nghệ, Đại học Quốc gia Hà Nội được thành lập vào ngày tháng năm nào?",
+    "answer": "Ngày 25 tháng 5 năm 2004.",
+    "relevant_chunk_ids": [109]
+  },
+  {
+    "question": "Tính đến năm 2026, tổng số học sinh đạt giải học sinh giỏi quốc gia của Đại học Quốc gia Hà Nội là bao nhiêu người?",
+    "answer": "Khoảng 1.169 người.",
+    "relevant_chunk_ids": [125]
+  },
+  {
+    "question": "Theo kết quả đánh giá dựa theo Thông tư số 13/2023/TT-BGDĐT, Trung tâm Kiểm định chất lượng giáo dục - ĐHQGHN đạt mức mấy?",
+    "answer": "Đạt Mức 2 (mức cao nhất).",
+    "relevant_chunk_ids": [207]
+  },
+  {
+    "question": "Kể từ ngày 1 tháng 9 năm 2025, theo Nghị định số 201/2025/NĐ-CP, Đại học Quốc gia Hà Nội chuyển sang trực thuộc cơ quan nào?",
+    "answer": "Trực thuộc Bộ Giáo dục và Đào tạo.",
+    "relevant_chunk_ids": [204]
+  },
+  {
+    "question": "Đại học Quốc gia Hà Nội chính thức nhận được con dấu mới mang hình Quốc huy vào ngày tháng năm nào?",
+    "answer": "Ngày 26 tháng 9 năm 1994.",
+    "relevant_chunk_ids": [236]
+  },
+  {
+    "question": "Theo Quy định ký hiệu ban hành năm 2006, định dạng ký hiệu mã thống nhất của ĐHQGHN gồm những thành phần nào?",
+    "answer": "QH – năm nhập học – ký hiệu tên đơn vị.",
+    "relevant_chunk_ids": [262]
+  },
+  {
+    "question": "Trụ sở chính của Đại học Quốc gia Hà Nội chính thức chuyển từ 144 Xuân Thủy về Hòa Lạc vào ngày tháng năm nào?",
+    "answer": "Ngày 19 tháng 5 năm 2022.",
+    "relevant_chunk_ids": [294]
+  },
+  {
+    "question": "Tổng mức đầu tư cho dự án Khu ký túc xá số 4 tại Hòa Lạc của ĐHQGHN là khoảng bao nhiêu tiền?",
+    "answer": "Khoảng 1.400 tỷ đồng.",
+    "relevant_chunk_ids": [316]
+  },
+  {
+    "question": "Bức tranh bích họa khổ lớn \"Thăng đường nhập thất\" tại tòa nhà Đại học Đông Dương là tác phẩm của họa sĩ nào?",
+    "answer": "Họa sĩ Victor Tardieu.",
+    "relevant_chunk_ids": [331]
+  },
+  {
+    "question": "Trường Đại học Công nghệ (VNU-UET) là đơn vị duy nhất tại Việt Nam tính đến thời điểm hiện tại đạt được thành tích gì tại cuộc thi ICPC?",
+    "answer": "Đạt Huy chương Đồng tại Cuộc thi Lập trình Quốc tế cho Sinh viên (ICPC).",
+    "relevant_chunk_ids": [364]
+  },
+  {
+    "question": "Vào năm học 1999, Khoa Công nghệ được thành lập trên cơ sở tổ chức lại hai khoa nào của Trường Đại học Khoa học Tự nhiên?",
+    "answer": "Khoa Công nghệ Thông tin và Khoa Công nghệ Điện tử - Viễn thông.",
+    "relevant_chunk_ids": [367]
+  },
+  {
+    "question": "Ai là Chủ nhiệm Khoa Công nghệ thông tin hiện tại của Trường Đại học Công nghệ?",
+    "answer": "GS. TS. Lê Sỹ Vinh.",
+    "relevant_chunk_ids": [374]
   },
   {
     "question": "Học phần tiên quyết là gì?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_001",
-    "reference_answer": "Học phần bắt buộc sinh viên phải tích lũy trước khi học học phần đó"
+    "answer": "Là học phần bắt buộc sinh viên phải tích lũy trước khi học học phần đó.",
+    "relevant_chunk_ids": [383]
   },
   {
-    "question": "Khóa luận tốt nghiệp là học phần bắt buộc đối với chương trình đào tạo nào?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_001",
-    "reference_answer": "Chương trình đào tạo chất lượng cao;Chất lượng cao"
+    "question": "Đối với sinh viên các khóa QH-2021, QH-2020, QH-2019 của UET, số tín chỉ tối thiểu hệ chất lượng cao phải đăng ký trong một học kỳ chính là bao nhiêu?",
+    "answer": "16 tín chỉ.",
+    "relevant_chunk_ids": [391]
   },
   {
-    "question": "Học phần điều kiện bao gồm những học phần nào?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_001",
-    "reference_answer": "Ngoại ngữ;Giáo dục thể chất;Giáo dục quốc phòng - an ninh;Kỹ năng bổ trợ"
+    "chunk_id": 403,
+    "question": "Địa chỉ email chính thức của Phòng Đào tạo Trường Đại học Công nghệ là gì?",
+    "answer": "daotao_dhcn@vnu.edu.vn",
+    "relevant_chunk_ids": [403]
   },
   {
-    "question": "Kết quả đánh giá các học phần điều kiện có ý nghĩa gì đối với sinh viên?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_002",
-    "reference_answer": "Là điều kiện để xét tốt nghiệp"
+    "question": "Thời gian đào tạo chính quy của khóa học tương ứng đối với bậc đào tạo kỹ sư tại UET là mấy học kỳ chính?",
+    "answer": "9 học kỳ chính.",
+    "relevant_chunk_ids": [405]
   },
   {
-    "question": "Đối với sinh viên khóa QH-2022 trở đi, học phần Ngoại ngữ có bắt buộc phải tích lũy không?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_002",
-    "reference_answer": "Có;Bắt buộc phải tích lũy"
+    "question": "Địa điểm tổ chức giảng dạy môn Giáo dục thể chất cho sinh viên UET nằm ở đâu?",
+    "answer": "Sân vận động đa năng đại học Ngoại ngữ - ĐHQG Hà Nội.",
+    "relevant_chunk_ids": [416]
   },
   {
-    "question": "Nếu bị điểm F học phần bắt buộc, sinh viên phải làm gì?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_003",
-    "reference_answer": "Đăng ký học lại học phần đó;Học lại"
+    "question": "Trong khung thang điểm 10 tại UET, mức điểm tổng kết học phần từ 8,5 đến 8,9 được quy đổi tương ứng với điểm chữ nào?",
+    "answer": "Tương ứng với điểm A.",
+    "relevant_chunk_ids": [426]
   },
   {
-    "question": "Nếu bị điểm F học phần tự chọn có điều kiện, sinh viên có thể đăng ký học học phần nào để thay thế?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_003",
-    "reference_answer": "Học phần tự chọn khác cùng khối kiến thức"
+    "question": "Mức điểm chữ F trong quy chế đào tạo tương ứng với mấy điểm số khi tính điểm trung bình chung?",
+    "answer": "Tương ứng với 0 điểm.",
+    "relevant_chunk_ids": [433]
   },
   {
-    "question": "Sinh viên đạt điểm bao nhiêu thì được đăng ký học cải thiện điểm?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_004",
-    "reference_answer": "D;D+"
+    "question": "Sinh viên UET có kết quả học tập toàn khóa đạt hạng xuất sắc hoặc giỏi sẽ bị hạ một hạng tốt nghiệp nếu tổng số tín chỉ phải học lại vượt quá bao nhiêu phần trăm?",
+    "answer": "Vượt quá 5% so với tổng số tín chỉ quy định cho toàn chương trình.",
+    "relevant_chunk_ids": [451]
   },
   {
-    "question": "Khi đăng ký học cải thiện điểm được chấp nhận, điểm học phần cũ sẽ thế nào?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_004",
-    "reference_answer": "Bị hủy bỏ"
+    "question": "Theo quy chế, một giờ tín chỉ lý thuyết được tính bằng bao nhiêu tiết học lý thuyết trên lớp?",
+    "answer": "Bằng 1 tiết lý thuyết.",
+    "relevant_chunk_ids": [477]
   },
   {
-    "question": "Số tín chỉ tối thiểu sinh viên hệ chuẩn khóa QH-2021 phải đăng ký trong một học kỳ chính là bao nhiêu?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_005",
-    "reference_answer": "14 tín chỉ;14"
+    "question": "Mỗi học phần theo quy định chung có khối lượng kiến thức nằm trong khoảng từ mấy đến mấy tín chỉ?",
+    "answer": "Từ 1 đến 3 tín chỉ.",
+    "relevant_chunk_ids": [480]
   },
   {
-    "question": "Số tín chỉ tối đa sinh viên theo học một ngành thuộc khóa QH-2020 được đăng ký trong học kỳ chính là bao nhiêu?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_005",
-    "reference_answer": "25 tín chỉ;25"
+    "question": "Theo Khung năng lực ngoại ngữ dùng cho Việt Nam, chuẩn đầu ra ngoại ngữ đối với chương trình đào tạo chuẩn là bậc mấy?",
+    "answer": "Đạt chuẩn bậc 3.",
+    "relevant_chunk_ids": [514]
   },
   {
-    "question": "Sinh viên đăng ký bao nhiêu tín chỉ trong một học kỳ chính thì mới được xét học bổng khuyến khích học tập?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_006",
-    "reference_answer": "Lớn hơn hoặc bằng số tín chỉ tối thiểu"
+    "question": "Sinh viên UET có hành vi gian lận trong làm tiểu luận, khóa luận, đồ án tốt nghiệp sẽ phải chịu mức kỷ luật như thế nào?",
+    "answer": "Bị kỷ luật từ mức đình chỉ học tập một năm đến mức buộc thôi học.",
+    "relevant_chunk_ids": [656]
   },
   {
-    "question": "Học kỳ phụ có bắt buộc sinh viên phải đăng ký lớp học phần không?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_006",
-    "reference_answer": "Không bắt buộc;Không"
+    "question": "Sinh viên bị kỷ luật ở hình thức Khiển trách trong phòng thi sẽ bị trừ bao nhiêu phần trăm số điểm của bài thi học phần đó?",
+    "answer": "Bị trừ 25% số điểm đạt được của bài thi.",
+    "relevant_chunk_ids": [658]
   },
   {
-    "question": "Ai là người tư vấn và quy định cụ thể số tín chỉ đăng ký học cho sinh viên thuộc diện cảnh báo học vụ?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_007",
-    "reference_answer": "Khoa;Viện;Bộ môn;Cố vấn học tập"
+    "question": "Trong cấu trúc điểm học phần, điểm thi kết thúc học phần bắt buộc phải có trọng số tối thiểu là bao nhiêu phần trăm?",
+    "answer": "Trọng số không dưới 60% điểm của học phần.",
+    "relevant_chunk_ids": [671]
   },
   {
-    "question": "Ai đã đăng ký sẵn các học phần bắt buộc cho sinh viên vào đầu mỗi học kỳ?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_008",
-    "reference_answer": "PĐT;Phòng Đào tạo"
+    "question": "Mã cơ sở được sử dụng trong công tác đào tạo tuyển sinh của Trường Đại học Công nghệ là gì?",
+    "answer": "Mã cơ sở là QHI.",
+    "relevant_chunk_ids": [761]
   },
   {
-    "question": "Sinh viên được điều chỉnh hoặc đổi lớp học phần muốn học thêm trong khoảng thời gian nào của học kỳ?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_008",
-    "reference_answer": "Tuần đầu của học kỳ;Tuần đầu"
+    "question": "Mức học phí dự kiến cho năm học 2026-2027 đối với ngành Trí tuệ nhân tạo (mã xét tuyển CN12) tại UET là bao nhiêu?",
+    "answer": "38,000,000 đồng/năm học.",
+    "relevant_chunk_ids": [923]
   },
   {
-    "question": "Sau mốc thời gian nào dữ liệu đăng ký học sẽ được chốt và không thể điều chỉnh?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_009",
-    "reference_answer": "Sau tuần đầu học kỳ;Sau tuần đầu"
-  },
-  {
-    "question": "Phòng tiếp sinh viên của Phòng Đào tạo Trường Đại học Công nghệ là phòng nào?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_009",
-    "reference_answer": "Phòng 105-E3;105-E3"
-  },
-  {
-    "question": "Số điện thoại liên hệ trực tiếp của Phòng Đào tạo UET là số nào?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_009",
-    "reference_answer": "024.37547865"
-  },
-  {
-    "question": "Thời gian đào tạo theo kế hoạch chuẩn đối với hình thức cử nhân chính quy của UET là bao nhiêu học kỳ chính?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_010",
-    "reference_answer": "8 học kỳ chính;8 học kỳ"
-  },
-  {
-    "question": "Thời gian đào tạo thiết kế đối với chương trình đào tạo kỹ sư chính quy tại UET là bao nhiêu học kỳ chính?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_010",
-    "reference_answer": "9 học kỳ chính;9 học kỳ"
-  },
-  {
-    "question": "Sĩ số quy định của mỗi lớp giảng dạy lý thuyết tại giảng đường của UET là bao nhiêu sinh viên?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_011",
-    "reference_answer": "Từ 50 đến 80 sinh viên;50-80"
-  },
-  {
-    "question": "Sĩ số quy định tối đa cho mỗi nhóm bài tập, thực hành hoặc thực tập là bao nhiêu sinh viên?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_012",
-    "reference_answer": "30 sinh viên;30"
-  },
-  {
-    "question": "Điều gì sẽ xảy ra nếu lớp học phần không đạt đủ sĩ số sinh viên tối thiểu để mở lớp?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_012",
-    "reference_answer": "Hủy học phần;Hủy lớp"
-  },
-  {
-    "question": "Hành vi can thiệp nào vào hệ thống đăng ký học bị nghiêm cấm đặc biệt đối với sinh viên?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_013",
-    "reference_answer": "Sử dụng phần mềm khác can thiệp vào hệ thống đăng ký học;Sử dụng phần mềm can thiệp"
-  },
-  {
-    "question": "Sinh viên cố tình đăng ký từ 2 học phần Giáo dục thể chất trở lên trong một học kỳ sẽ bị xử lý thế nào?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_013",
-    "reference_answer": "Bị hủy học phần"
-  },
-  {
-    "question": "Địa điểm học tập môn Giáo dục thể chất của ĐHQGHN nằm ở đâu?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_013",
-    "reference_answer": "Sân vận động đa năng đại học Ngoại ngữ;Sân vận động đa năng đại học Ngoại ngữ - ĐHQG Hà Nội"
-  },
-  {
-    "question": "Sinh viên muốn được miễn học ngoại ngữ cần đạt năng lực ngoại ngữ tương ứng với chuẩn nào ban hành năm 2015?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_014",
-    "reference_answer": "Chuẩn đầu ra về trình độ ngoại ngữ quy định tại Quy chế Đào tạo Đại học ở năm 2015"
-  },
-  {
-    "question": "Sinh viên được dự thi kết thúc học phần khi đáp ứng những điều kiện tài chính và học vụ cơ bản nào?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_017",
-    "reference_answer": "Điểm đánh giá bộ phận lớn hơn 0 và trả học phí đầy đủ"
-  },
-  {
-    "question": "Kỳ thi phụ kết thúc học phần được tổ chức dành riêng cho đối tượng sinh viên nào?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_017",
-    "reference_answer": "Sinh viên chưa dự kỳ thi chính vì lý do chính đáng"
-  },
-  {
-    "question": "Sinh viên vắng mặt trong buổi thi kết thúc học phần mà không có lý do chính đáng sẽ nhận điểm mấy?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_017",
-    "reference_answer": "0;Điểm 0"
-  },
-  {
-    "question": "Thang điểm dùng để chấm điểm đánh giá bộ phận và điểm thi kết thúc học phần là thang điểm mấy?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_018",
-    "reference_answer": "Thang điểm 10"
-  },
-  {
-    "question": "Mức điểm tổng kết học phần loại đạt gồm những điểm chữ nào theo quy chế?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_018",
-    "reference_answer": "A+;A;B+;B;C+;C;D+;D"
-  },
-  {
-    "question": "Điểm tổng kết học phần dưới 4,0 tương ứng với loại không đạt và nhận điểm chữ gì?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_018",
-    "reference_answer": "F"
-  },
-  {
-    "question": "Ký hiệu 'I' dùng trong bảng điểm học phần biểu thị cho trạng thái học vụ nào?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_018",
-    "reference_answer": "Chưa đủ điểm đánh giá bộ phận"
-  },
-  {
-    "question": "Ký hiệu 'X' dùng trong xếp mức đánh giá học phần có ý nghĩa gì?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_018",
-    "reference_answer": "Chưa nhận được kết quả thi kết thúc học phần"
-  },
-  {
-    "question": "Điểm trung bình chung học kỳ tính toán dựa trên các học phần nào của học kỳ đó?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_019",
-    "reference_answer": "Tất cả các học phần mà sinh viên đăng ký học trong học kỳ đó"
-  },
-  {
-    "question": "Điểm trung bình chung tích lũy được tính dựa trên những học phần nào?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_019",
-    "reference_answer": "Các học phần đã được đánh giá loại đạt"
-  },
-  {
-    "question": "Điểm trung bình chung tích lũy từ bao nhiêu trở lên thì sinh viên xếp hạng học lực bình thường?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_019",
-    "reference_answer": "Từ 2,00 trở lên;2.00"
-  },
-  {
-    "question": "Sinh viên có điểm trung bình chung tích lũy dưới 2,00 sẽ bị xếp hạng học lực gì?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_019",
-    "reference_answer": "Học lực yếu;Yếu"
-  },
-  {
-    "question": "Điểm chữ C+ quy đổi sang thang điểm 4 có giá trị số là bao nhiêu?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_020",
-    "reference_answer": "2.5"
-  },
-  {
-    "question": "Điểm chữ A tương ứng với mức điểm số bao nhiêu khi tính điểm trung bình chung?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_020",
-    "reference_answer": "3.7"
-  },
-  {
-    "question": "Kết quả học phần Ngoại ngữ, Giáo dục thể chất và Giáo dục quốc phòng có tính vào điểm trung bình chung tích lũy không?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_021",
-    "reference_answer": "Không;Không tính"
-  },
-  {
-    "question": "Điểm trung bình chung tích lũy của sinh viên năm thứ hai đạt dưới bao nhiêu thì bị cảnh báo kết quả học tập?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_022",
-    "reference_answer": "Dưới 1,40;1.4"
-  },
-  {
-    "question": "Số lần bị cảnh báo kết quả học tập liên tiếp tối đa của sinh viên trước khi bị buộc thôi học là bao nhiêu lần?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_022",
-    "reference_answer": "2 lần liên tiếp;2 lần"
-  },
-  {
-    "question": "Chậm nhất là bao lâu sau khi có quyết định buộc thôi học sinh viên, đơn vị đào tạo phải thông báo về địa phương?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_024",
-    "reference_answer": "1 tháng"
-  },
-  {
-    "question": "Điểm trung bình chung tích lũy toàn khóa học tối thiểu để xét tốt nghiệp hệ chuẩn là bao nhiêu?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_025",
-    "reference_answer": "Từ 2,00 trở lên;2.00"
-  },
-  {
-    "question": "Điểm trung bình chung tích lũy toàn khóa học tối thiểu để xét tốt nghiệp chương trình chất lượng cao là bao nhiêu?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_025",
-    "reference_answer": "Từ 2,50 trở lên;2.5"
-  },
-  {
-    "question": "Chuẩn trình độ ngoại ngữ đầu ra đối với chương trình đào tạo cử nhân hệ chất lượng cao yêu cầu đạt bậc mấy?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_025",
-    "reference_answer": "Bậc 4"
-  },
-  {
-    "question": "Sinh viên khóa học tốt nghiệp đạt hạng xuất sắc hoặc giỏi sẽ bị hạ một hạng tốt nghiệp nếu tổng số tín chỉ học lại vượt quá bao nhiêu %?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_026",
-    "reference_answer": "Vượt quá 5%;5%"
-  },
-  {
-    "question": "Sinh viên chương trình Công nghệ thông tin chất lượng cao bị chuyển sang hệ chuẩn nếu điểm trung bình học kỳ tính đến thời điểm xét dưới mức nào?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_027",
-    "reference_answer": "Dưới 2,50;2.5"
-  },
-  {
-    "question": "Mức điểm trung bình chung tối thiểu của các học phần tính đến thời điểm xét để tuyển bổ sung sinh viên vào hệ CLC là bao nhiêu?",
-    "ground_truth_chunk_id": "SO_TAY_HOC_VU_REG_028",
-    "reference_answer": "Từ 3,20 trở lên;3.2"
-  },
-  {
-    "question": "Quy chế đào tạo đại học ban hành kèm theo Quyết định số 5115/QĐ-ĐHQGHN do ai ban hành?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_000",
-    "reference_answer": "Giám đốc ĐHQGHN"
-  },
-  {
-    "question": "Hệ thống tổ chức và quản lý đào tạo bậc đại học của ĐHQGHN gồm mấy cấp?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_002",
-    "reference_answer": "Hai cấp;2 cấp"
-  },
-  {
-    "question": "Trường nào chịu trách nhiệm giảng dạy các học phần ngoại ngữ trong ĐHQGHN?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_003",
-    "reference_answer": "Trường Đại học Ngoại ngữ"
-  },
-  {
-    "question": "Trường nào phụ trách giảng dạy các học phần lý luận chính trị cho sinh viên?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_003",
-    "reference_answer": "Trường Đại học Khoa học Xã hội và Nhân văn"
-  },
-  {
-    "question": "Trung tâm nào trong ĐHQGHN tổ chức giảng dạy học phần Giáo dục quốc phòng - an ninh?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_003",
-    "reference_answer": "Trung tâm Giáo dục quốc phòng - an ninh"
-  },
-  {
-    "question": "Khối lượng kiến thức quy định của mỗi học phần trong chương trình đào tạo là bao nhiêu tín chỉ?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_007",
-    "reference_answer": "Từ 2 đến 6 tín chỉ;2-6 tín chỉ"
-  },
-  {
-    "question": "Khối lượng kiến thức của học phần khóa luận, đồ án tốt nghiệp dao động trong khoảng bao nhiêu tín chỉ?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_007",
-    "reference_answer": "Từ 6 đến 10 tín chỉ;6-10 tín chỉ"
-  },
-  {
-    "question": "Đề cương học phần do ai biên soạn?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_008",
-    "reference_answer": "Giảng viên"
-  },
-  {
-    "question": "Cơ quan nào chịu trách nhiệm thẩm định ngân hàng câu hỏi của học phần?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_009",
-    "reference_answer": "Hội đồng khoa học và đào tạo cấp khoa"
-  },
-  {
-    "question": "Hãy liệt kê các khối kiến thức cấu thành cấu trúc của một chương trình đào tạo đại học?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_019",
-    "reference_answer": "Khối kiến thức chung;Khối kiến thức theo lĩnh vực;Khối kiến thức theo khối ngành;Khối kiến thức theo nhóm ngành;Khối kiến thức ngành"
-  },
-  {
-    "question": "Chuẩn đầu ra của một chương trình đào tạo đại học gồm những chuẩn thành phần nào?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_021",
-    "reference_answer": "Chuẩn về kiến thức;Chuẩn về kỹ năng nghề nghiệp và kỹ năng bổ trợ;Chuẩn về thái độ"
-  },
-  {
-    "question": "Chuẩn đầu ra trình độ ngoại ngữ đối với chương trình đào tạo chuẩn quốc tế yêu cầu bậc mấy?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_022",
-    "reference_answer": "Bậc 5"
-  },
-  {
-    "question": "Khối lượng kiến thức thiết kế tối thiểu đối với chương trình đào tạo cử nhân chuẩn là bao nhiêu tín chỉ?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_025",
-    "reference_answer": "120 tín chỉ;120"
-  },
-  {
-    "question": "Khối lượng kiến thức thiết kế tối thiểu đối với chương trình đào tạo kỹ sư chuẩn là bao nhiêu tín chỉ?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_025",
-    "reference_answer": "140 tín chỉ;140"
-  },
-  {
-    "question": "Cơ quan nào ra quyết định ban hành các chương trình đào tạo của Đại học Quốc gia Hà Nội?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_029",
-    "reference_answer": "Đại học Quốc gia Hà Nội;ĐHQGHN"
-  },
-  {
-    "question": "Một năm học tuyển sinh quy định bao gồm mấy học kỳ chính?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_030",
-    "reference_answer": "2 học kỳ chính;Hai"
-  },
-  {
-    "question": "Một học kỳ chính tiêu chuẩn có bao nhiêu tuần học tập thực tế?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_030",
-    "reference_answer": "15 tuần học;15 tuần"
-  },
-  {
-    "question": "Thời gian tối đa để sinh viên hoàn thành khóa học đối với chương trình đào tạo đại học có thời gian thiết kế dưới 4 năm là bao nhiêu học kỳ chính?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_032",
-    "reference_answer": "Thời gian thiết kế cộng với 4 học kỳ chính"
-  },
-  {
-    "question": "Sinh viên tích lũy từ 35 đến 70 tín chỉ sẽ được xếp vào năm đào tạo thứ mấy đối với chương trình đào tạo chuẩn?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_033",
-    "reference_answer": "Năm thứ hai;Năm thứ 2"
-  },
-  {
-    "question": "Đầu khóa học, đơn vị đào tạo phải thông báo những thông tin cam kết và học vụ cơ bản nào cho sinh viên?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_035",
-    "reference_answer": "Cam kết chất lượng giáo dục;Chương trình đào tạo;Chuẩn đầu ra;Điều kiện đảm bảo chất lượng;Thông tin về học phí;Quy chế đào tạo"
-  },
-  {
-    "question": "Chậm nhất bao lâu trước khi học kỳ mới bắt đầu, đơn vị đào tạo phải thông báo thời khóa biểu dự kiến?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_036",
-    "reference_answer": "1 tháng"
-  },
-  {
-    "question": "Thời gian hoạt động giảng dạy và học tập hàng ngày của đơn vị đào tạo từ mấy giờ đến mấy giờ?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_037",
-    "reference_answer": "Từ 7 giờ đến 21 giờ;7h00 - 21h00"
-  },
-  {
-    "question": "Thời lượng quy định cho một tiết học trên lớp là bao nhiêu phút?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_037",
-    "reference_answer": "50 phút"
-  },
-  {
-    "question": "Chức danh của giảng viên trực tiếp phụ trách điều hành và quản lý một lớp khóa học là gì?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_038",
-    "reference_answer": "Giáo viên chủ nhiệm"
-  },
-  {
-    "question": "Học lực xếp loại nào ở một trong hai chương trình đào tạo buộc sinh viên phải dừng học bằng kép ở học kỳ tiếp theo?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_054",
-    "reference_answer": "Xếp loại yếu;Yếu"
-  },
-  {
-    "question": "Mức kỷ luật áp dụng đối với sinh viên có hành vi gian lận nghiêm trọng trong làm khóa luận, đồ án tốt nghiệp là gì?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_072",
-    "reference_answer": "Đình chỉ học tập một năm đến buộc thôi học"
-  },
-  {
-    "question": "Mức hình phạt trừ điểm bài thi học phần đối với sinh viên bị lập biên bản kỷ luật khiển trách trong phòng thi là bao nhiêu %?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_073",
-    "reference_answer": "25%"
-  },
-  {
-    "question": "Mức hình phạt trừ điểm bài thi học phần đối với sinh viên bị lập biên bản kỷ luật cảnh cáo trong phòng thi là bao nhiêu %?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_074",
-    "reference_answer": "50%"
-  },
-  {
-    "question": "Sinh viên thi hộ hoặc nhờ người khác thi hộ lần thứ nhất sẽ bị xử lý kỷ luật ở mức nào?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_074",
-    "reference_answer": "Đình chỉ học tập 1 năm;Đình chỉ học tập một năm"
-  },
-  {
-    "question": "Sinh viên thi hộ hoặc nhờ người khác thi hộ đến lần thứ hai sẽ bị xử lý kỷ luật ở mức nào?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_074",
-    "reference_answer": "Buộc thôi học"
-  },
-  {
-    "question": "Trọng số điểm thi kết thúc học phần bắt buộc chiếm tối thiểu bao nhiêu % trong điểm tổng kết học phần?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_078",
-    "reference_answer": "Không dưới 60%;60%"
-  },
-  {
-    "question": "Việc chấm thi và công bố điểm tổng kết học phần phải được hoàn thành chậm nhất là bao nhiêu ngày làm việc kể từ ngày thi?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_082",
-    "reference_answer": "8 ngày làm việc;8 ngày"
-  },
-  {
-    "question": "Thời gian lưu trữ tối thiểu đối với đề thi, đáp án và bài thi kết thúc học phần của sinh viên là bao lâu?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_082",
-    "reference_answer": "Ít nhất hai năm;2 năm"
-  },
-  {
-    "question": "Số lượng thành viên tối thiểu cấu thành một Hội đồng chấm khóa luận hoặc đồ án tốt nghiệp đại học là bao nhiêu?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_084",
-    "reference_answer": "3 thành viên;3"
-  },
-  {
-    "question": "Thành tích nghiên cứu khoa học đạt giải Nhất cấp ĐHQGHN sẽ được thưởng bao nhiêu điểm vào điểm trung bình chung?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_065",
-    "reference_answer": "0.20 điểm;0.2"
-  },
-  {
-    "question": "Trình độ chuyên môn tối thiểu quy định đối với một giảng viên làm Cố vấn học tập là gì?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_068",
-    "reference_answer": "Thạc sĩ trở lên;Thạc sĩ"
-  },
-  {
-    "question": "Yêu cầu thâm niên giảng dạy trực tiếp tối thiểu đối với một Cố vấn học tập là bao lâu?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_068",
-    "reference_answer": "Ít nhất 2 năm;2 năm"
-  },
-  {
-    "question": "Học lực của sinh viên sau mỗi học kỳ được xếp loại Xuất sắc khi điểm trung bình học kỳ nằm trong khoảng nào?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_098",
-    "reference_answer": "Từ 3,60 đến 4,00;3.60 - 4.00"
-  },
-  {
-    "question": "Định kỳ mỗi năm Trường tổ chức xét tốt nghiệp cho sinh viên làm mấy đợt chính thức?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_102",
-    "reference_answer": "4 lần;4 đợt"
-  },
-  {
-    "question": "Hạng tốt nghiệp đại học của sinh viên đạt loại Giỏi tương ứng với điểm trung bình chung tích lũy toàn khóa nằm trong khoảng nào?",
-    "ground_truth_chunk_id": "QUY_CHE_DAO_TAO_REG_103",
-    "reference_answer": "Từ 3,20 đến 3,59;3.20 - 3.59"
-  },
-  {
-    "question": "Mã cơ sở dùng trong đào tạo tuyển sinh đại học chính quy của Trường Đại học Công nghệ là gì?",
-    "ground_truth_chunk_id": "TUYEN_SINH_2026_REG_0001",
-    "reference_answer": "QHI"
-  },
-  {
-    "question": "Ai là Hiệu trưởng hiện tại của Trường Đại học Công nghệ theo văn bản tuyển sinh năm 2026?",
-    "ground_truth_chunk_id": "TUYEN_SINH_2026_REG_000",
-    "reference_answer": "GS. TS. Chử Đức Trình;Chử Đức Trình"
-  },
-  {
-    "question": "Tỷ lệ chỉ tiêu phân bổ xét tuyển thẳng và xét tuyển theo kế hoạch chung của Bộ GD&ĐT năm 2026 tại UET lần lượt là bao nhiêu?",
-    "ground_truth_chunk_id": "TUYEN_SINH_2026_REG_003",
-    "reference_answer": "5% xét tuyển thẳng và 95% xét tuyển theo kế hoạch chung"
-  },
-  {
-    "question": "Môn thi học sinh giỏi quốc gia đạt giải nào thì được tuyển thẳng vào ngành Công nghệ nông nghiệp tại UET?",
-    "ground_truth_chunk_id": "TUYEN_SINH_2026_REG_004",
-    "reference_answer": "Sinh học"
-  },
-  {
-    "question": "Tổ hợp xét tuyển đại học A01 của Trường Đại học Công nghệ quy định gồm những môn thi nào?",
-    "ground_truth_chunk_id": "TUYEN_SINH_2026_REG_005",
-    "reference_answer": "Toán, Lý, Anh"
-  },
-  {
-    "question": "Tổ hợp xét tuyển đại học X06 của Trường Đại học Công nghệ quy định gồm những môn thi nào?",
-    "ground_truth_chunk_id": "TUYEN_SINH_2026_REG_005",
-    "reference_answer": "Toán, Lý, Tin"
-  },
-  {
-    "question": "Chỉ tiêu tuyển sinh dự kiến năm 2026 của ngành Trí tuệ nhân tạo (CN12) là bao nhiêu học sinh?",
-    "ground_truth_chunk_id": "TUYEN_SINH_2026_REG_017",
-    "reference_answer": "300"
-  },
-  {
-    "question": "Mức học phí dự kiến áp dụng cho năm học 2026-2027 của ngành Công nghệ nông nghiệp (CN10) là bao nhiêu?",
-    "ground_truth_chunk_id": "TUYEN_SINH_2026_REG_0027",
-    "reference_answer": "38,000,000 đồng/năm học;38 triệu"
-  },
-  {
-    "question": "Chỉ tiêu tuyển sinh dự kiến năm 2026 của ngành Công nghệ thông tin (CN1) là bao nhiêu học sinh?",
-    "ground_truth_chunk_id": "TUYEN_SINH_2026_REG_014",
-    "reference_answer": "480"
+    "question": "Điểm trúng tuyển chính thức theo phương thức điểm thi tốt nghiệp THPT năm 2024 vào ngành Kỹ thuật điều khiển và tự động hoá của UET là bao nhiêu điểm?",
+    "answer": "27.05 điểm.",
+    "relevant_chunk_ids": [841]
   }
 ]

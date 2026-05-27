@@ -1,103 +1,50 @@
+QH
+1
+Đứng đầu phát triển nền giáo dục Việt Nam.
+323
+Huân chương Sao Vàng
 UNKNOWN
-không
+Phương thức đánh giá năng lực.
+Ban Điều hành Mạng lưới các trường đại học Đông Nam Á.
+I
+Thủ tướng Chính phủ
+16 tháng 5 năm 1906
+1
+Đại học Quốc gia Việt Nam
+Sắc lệnh số 45/SL
+15 tháng 10 năm 1956, ngày 5 tháng 9 năm 2013
+Thanh Hóa
+4 tháng 6 năm 1956
+Thủ tướng Phạm Văn Đồng
+Nguyễn Khánh Toàn
+1967
+Ba
+25 tháng 5 năm 2004
+1.169 người
+3
+Bộ Giáo dục và Đào tạo
+26 tháng 9 năm 1994
+Ký hiệu gồm: QH- năm nhập học - ký hiệu tên đơn vị.
+19 tháng 5 năm 2022
+1.400 tỷ đồng
+Victor Tardieu
+Đạt Huy chương Đồng tại Cuộc thi Lập trình Quốc tế cho Sinh viên (ICPC).
+Khoa Công nghệ được thành lập trên cơ sở sắp xếp, tổ chức lại Khoa Công nghệ Thông tin và Khoa Công nghệ Điện tử - Viễn thông.
 UNKNOWN
-chương trình đào tạo chất lượng cao
-UNKNOWN
-UNKNOWN
-bắt buộc phải
-đăng ký học lại học phần đó;
-UNKNOWN
-UNKNOWN
-UNKNOWN
-14
-25
-UNKNOWN
-không bắt buộc,
-Khoa/Viện/Bộ môn và Cố vấn học tập tư vấn,
-PĐT
-UNKNOWN
-Sau tuần đầu học kỳ,
-UNKNOWN
-UNKNOWN
-UNKNOWN
-9
-UNKNOWN
-16
-UNKNOWN
-phần mềm khác
-UNKNOWN
-Hòa Lạc, Thạch Thất, Hà Nội.
-chuẩn đầu ra
-UNKNOWN
-những sinh viên chưa dự kỳ thi chính
-điểm 0
-thang điểm 10
-UNKNOWN
-F
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-2,00
-học lực yếu.
-UNKNOWN
-3,5;
-không
-dưới 1,40
-UNKNOWN
-tháng
-UNKNOWN
-UNKNOWN
-UNKNOWN
+Học phần tiên quyết là học phần sinh viên phải tích lũy trước khi học học phần đó.
+16 tín chỉ
+daotao_dhcn@vnu.edu.vn
+9 học kỳ chính
+Trung tâm Giáo dục Thể chất và Thể thao
+A
+0
 5%
-UNKNOWN
-2,50;
-UNKNOWN
-UNKNOWN
-Trường Đại học Ngoại ngữ
-Trường Đại học Khoa học Xã hội và Nhân văn
-Trung tâm Giáo dục quốc phòng - an ninh
-UNKNOWN
-UNKNOWN
-giảng viên
-Hội đồng khoa học và đào tạo cấp khoa
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-140 đến tín chỉ
-TỔ CHỨC ĐÀO TẠO
-hai
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-một tháng
-UNKNOWN
-UNKNOWN
-giáo viên chủ nhiệm.
-học lực xếp loại yếu
-UNKNOWN
+Một giờ tín chỉ lý thuyết bằng một tiết học lý thuyết trên lớp.
+từ 1 đến tối thiểu là 2 tín chỉ
+5
+bị kỷ luật từ mức đình chỉ học tập một năm đến buộc thôi học.
 25%
-UNKNOWN
-UNKNOWN
-UNKNOWN
 60%
-UNKNOWN
-hai năm
-UNKNOWN
-0,20 điểm
-thạc sĩ
-UNKNOWN
-3,60 đến 4,00
-hai
-3,20 đến 3,59
-UNKNOWN
-UNKNOWN
-UNKNOWN
-giải Ngành phù hợp
-UNKNOWN
-UNKNOWN
-38,000,000 đồng/năm học
-38,000,000 đồng/năm học
-340;
+QHI
+38,000,000 đồng/năm học.
+27.05

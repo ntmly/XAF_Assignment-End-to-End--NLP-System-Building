@@ -1,103 +1,50 @@
-Học phần có những nội dung kiến thức chính của chương trình đào tạo
-Không;Không tính
-Học phần bắt buộc sinh viên phải tích lũy trước khi học học phần đó
-Chương trình đào tạo chất lượng cao;Chất lượng cao
-Ngoại ngữ;Giáo dục thể chất;Giáo dục quốc phòng - an ninh;Kỹ năng bổ trợ
-Là điều kiện để xét tốt nghiệp
-Có;Bắt buộc phải tích lũy
-Đăng ký học lại học phần đó hoặc học đổi sang học phần khác để thay thế
-Học phần tự chọn khác cùng khối kiến thức
-D;D+
-Bị hủy bỏ
-14 tín chỉ;14
-25 tín chỉ;25
-Lớn hơn hoặc bằng số tín chỉ tối thiểu
-Không bắt buộc;Không
-Khoa;Viện;Bộ môn;Cố vấn học tập
-PĐT;Phòng Đào tạo
-Tuần đầu của học kỳ;Tuần đầu
-Sau tuần đầu học kỳ;Sau tuần đầu
-Phòng 105-E3;105-E3
-024.37547865
-8 học kỳ chính;8 học kỳ
-9 học kỳ chính;9 học kỳ
-Từ 50 đến 80 sinh viên;50-80
-30 sinh viên;30
-Hủy học phần;Hủy lớp
-Sử dụng phần mềm khác can thiệp vào hệ thống đăng ký học;Sử dụng phần mềm can thiệp
-Bị hủy học phần
-Sân vận động đa năng đại học Ngoại ngữ;Sân vận động đa năng đại học Ngoại ngữ - ĐHQG Hà Nội
-Chuẩn đầu ra về trình độ ngoại ngữ quy định tại Quy chế Đào tạo Đại học ở năm 2015
-Điểm đánh giá bộ phận lớn hơn 0 và trả học phí đầy đủ
-Sinh viên chưa dự kỳ thi chính vì lý do chính đáng
-0;Điểm 0
-Thang điểm 10
-A+;A;B+;B;C+;C;D+;D
-F
-Chưa đủ điểm đánh giá bộ phận
-Chưa nhận được kết quả thi kết thúc học phần
-Tất cả các học phần mà sinh viên đăng ký học trong học kỳ đó
-Các học phần đã được đánh giá loại đạt
-Từ 2,00 trở lên;2.00
-Học lực yếu;Yếu
-2.5
-3.7
-Không;Không tính
-Dưới 1,40;1.4
-2 lần liên tiếp;2 lần
-1 tháng
-Từ 2,00 trở lên;2.00
-Từ 2,50 trở lên;2.5
-Bậc 4
-Vượt quá 5%;5%
-Dưới 2,50;2.5
-Từ 3,20 trở lên;3.2
-Giám đốc ĐHQGHN
-Hai cấp;2 cấp
-Trường Đại học Ngoại ngữ
-Trường Đại học Khoa học Xã hội và Nhân văn
-Trung tâm Giáo dục quốc phòng - an ninh
-Từ 2 đến 6 tín chỉ;2-6 tín chỉ
-Từ 6 đến 10 tín chỉ;6-10 tín chỉ
-Giảng viên
-Hội đồng khoa học và đào tạo cấp khoa
-Khối kiến thức chung;Khối kiến thức theo lĩnh vực;Khối kiến thức theo khối ngành;Khối kiến thức theo nhóm ngành;Khối kiến thức ngành
-Chuẩn về kiến thức;Chuẩn về kỹ năng nghề nghiệp và kỹ năng bổ trợ;Chuẩn về thái độ
-Bậc 5
-120 tín chỉ;120
-140 tín chỉ;140
-Đại học Quốc gia Hà Nội;ĐHQGHN
-2 học kỳ chính;Hai
-15 tuần học;15 tuần
-Thời gian thiết kế cộng với 4 học kỳ chính
-Năm thứ hai;Năm thứ 2
-Cam kết chất lượng giáo dục;Chương trình đào tạo;Chuẩn đầu ra;Điều kiện đảm bảo chất lượng;Thông tin về học phí;Quy chế đào tạo
-1 tháng
-Từ 7 giờ đến 21 giờ;7h00 - 21h00
-50 phút
-Giáo viên chủ nhiệm
-Xếp loại yếu;Yếu
-Đình chỉ học tập một năm đến buộc thôi học
-25%
-50%
-Đình chỉ học tập 1 năm;Đình chỉ học tập một năm
-Buộc thôi học
-Không dưới 60%;60%
-8 ngày làm việc;8 ngày
-Ít nhất hai năm;2 năm
-3 thành viên;3
-0.20 điểm;0.2
-Thạc sĩ trở lên;Thạc sĩ
-Ít nhất 2 năm;2 năm
-Từ 3,60 đến 4,00;3.60 - 4.00
-4 lần;4 đợt
-Từ 3,20 đến 3,59;3.20 - 3.59
-QHI
-GS. TS. Chử Đức Trình;Chử Đức Trình
-5% xét tuyển thẳng và 95% xét tuyển theo kế hoạch chung
-Sinh học
-Toán, Lý, Anh
-Toán, Lý, Tin
-300
-38,000,000 đồng/năm học;38 triệu
-480
+QH
+Giữ vị trí top 1
+Vai trò đầu tàu phát triển nền giáo dục Việt Nam
+323 giải thưởng Olympic quốc tế và khu vực
+Huân chương Sao Vàng
+Loại hình giáo dục phổ thông chuyên đầu tiên
+Phương thức đánh giá năng lực
+Ban điều hành Mạng lưới các trường đại học Đông Nam Á
+Đơn vị dự toán cấp I
+Do Thủ tướng Chính phủ bổ nhiệm, miễn nhiệm
+Ngày 16 tháng 5 năm 1906
+Gồm 5 trường thành viên
+Đại học Quốc gia Việt Nam
+Sắc lệnh số 45/SL
+Ngày 15 tháng 11 năm 1945
+Đặt tại Thanh Hóa
+Ngày 4 tháng 6 năm 1956
+Thủ tướng Phạm Văn Đồng
+Thứ trưởng Bộ Quốc gia Giáo dục Nguyễn Khánh Toàn
+Ngày 14 tháng 8 năm 1967
+Sáp nhập ba trường đại học trọng điểm
+Ngày 25 tháng 5 năm 2004
+Khoảng 1.169 người
+Đạt Mức 2 (mức cao nhất)
+Trực thuộc Bộ Giáo dục và Đào tạo
+Ngày 26 tháng 9 năm 1994
+QH – năm nhập học – ký hiệu tên đơn vị
+Ngày 19 tháng 5 năm 2022
+Khoảng 1.400 tỷ đồng
+Họa sĩ Victor Tardieu
+Đạt Huy chương Đồng tại Cuộc thi Lập trình Quốc tế cho Sinh viên (ICPC)
+Khoa Công nghệ Thông tin và Khoa Công nghệ Điện tử - Viễn thông
+GS. TS. Lê Sỹ Vinh
+Là học phần bắt buộc sinh viên phải tích lũy trước khi học học phần đó
+16 tín chỉ
+daotao_dhcn@vnu.edu.vn
+9 học kỳ chính
+Sân vận động đa năng đại học Ngoại ngữ - ĐHQG Hà Nội
+Tương ứng với điểm A
+Tương ứng với 0 điểm
+Vượt quá 5% so với tổng số tín chỉ quy định cho toàn chương trình
+Bằng 1 tiết lý thuyết
+Từ 1 đến 3 tín chỉ
+Đạt chuẩn bậc 3
+Bị kỷ luật từ mức đình chỉ học tập một năm đến mức buộc thôi học
+Bị trừ 25% số điểm đạt được của bài thi
+Trọng số không dưới 60% điểm của học phần
+Mã cơ sở là QHI
+38,000,000 đồng/năm học
+27.05 điểm

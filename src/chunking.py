@@ -43,12 +43,10 @@ def process_chunks(input_file: str, output_file: str, chunk_size: int, chunk_ove
         text = old['text']
         sub_texts = split_text_by_sentences(text, chunk_size, chunk_overlap)
         for i, sub in enumerate(sub_texts):
-            # Tạo chunk_id mới: lấy chunk_id cũ + _sub_{i}
-            new_id = f"{old['chunk_id']}_sub_{i}" if 'chunk_id' in old else f"DOC_{old.get('doc_id',0)}_CHUNK_{i}"
+            new_id = f"{old['chunk_id']}_sub_{i}"
             new_chunks.append({
-                "doc_id": old.get('doc_id', 0),
                 "chunk_id": new_id,
-                "title": title,       
+                "title": title,
                 "text": sub.strip()
             })
     

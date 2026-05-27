@@ -1,51 +1,93 @@
-from transformers import AutoModelForCausalLM, AutoTokenizer
-import torch
+from pathlib import Path
+from llama_cpp import Llama
+
 
 class GenerativeReader:
-    def __init__(self, model_name: str, max_new_tokens: int = 256):
-        print(f"Loading generative model {model_name} on CPU...")
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
-        self.model = AutoModelForCausalLM.from_pretrained(
-            model_name,
-            torch_dtype=torch.float32,
-            device_map="cpu",
-            trust_remote_code=True
+
+    def __init__(
+        self,
+        model_path: str,
+        max_new_tokens: int = 128
+    ):
+
+        BASE_DIR = Path(__file__).resolve().parent.parent
+
+        MODEL_PATH = BASE_DIR / model_path
+
+        print(f"[GenerativeReader] Đang load model:")
+        print(MODEL_PATH)
+        print(f"Model exists: {MODEL_PATH.exists()}")
+
+        if not MODEL_PATH.exists():
+            raise FileNotFoundError(
+                f"Không tìm thấy model tại: {MODEL_PATH}"
+            )
+
+        self.llm = Llama(
+            model_path=str(MODEL_PATH),
+
+            n_ctx=1024,
+
+            n_threads=4,
+            n_threads_batch=4,
+
+            n_batch=64,
+
+            verbose=False
         )
-        self.max_new_tokens = max_new_tokens
-        
-        # Đặt padding token nếu chưa có
-        if self.tokenizer.pad_token is None:
-            self.tokenizer.pad_token = self.tokenizer.eos_token
+
+        self.max_new_tokens = int(max_new_tokens)
+
+        print("[GenerativeReader] Load model thành công.")
 
     def answer(self, query: str, retrieved_chunks: list) -> str:
+
         if not retrieved_chunks:
             return "UNKNOWN"
 
-        # 1. Tạo context từ các chunks đã retrieve
-        context = "\n\n---\n\n".join(retrieved_chunks) # Phân cách rõ ràng giữa các đoạn
-        
-        # 2. Tạo prompt theo định dạng chat
-        messages = [
-            {"role": "system", "content": "Bạn là một trợ lý AI hữu ích. Hãy trả lời câu hỏi của người dùng một cách chính xác và đầy đủ dựa trên thông tin được cung cấp."},
-            {"role": "user", "content": f"Dựa vào các thông tin sau:\n{context}\n---\nHãy trả lời câu hỏi: {query}"}
-        ]
-        
-        # Áp dụng chat template cho model
-        prompt = self.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-        
-        # 3. Tokenize và sinh câu trả lời
-        inputs = self.tokenizer(prompt, return_tensors="pt", truncation=True, max_length=2048).to("cpu")
-        with torch.no_grad():
-            outputs = self.model.generate(
-                **inputs,
-                max_new_tokens=self.max_new_tokens,
-                do_sample=False, # Tắt sampling để có kết quả nhất quán
-                temperature=0.1,
-                repetition_penalty=1.1
-            )
-        
-        # 4. Giải mã và trả về kết quả
-        full_response = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
-        # Chỉ lấy phần trả lời của assistant (phần sau prompt)
-        answer = full_response[len(prompt):].strip()
-        return answer if answer else "UNKNOWN"
+        context = "\n\n---\n\n".join(
+            retrieved_chunks[:3]
+        )
+
+        prompt = (
+            "<|im_start|>system\n"
+            "Bạn là trợ lý AI trả lời câu hỏi dựa trên tài liệu.\n"
+            "Quy tắc bắt buộc:\n"
+            "1. Chỉ dùng thông tin trong phần TÀI LIỆU.\n"
+            "2. Trả lời bằng 1-2 câu ngắn gọn, tiếng Việt.\n"
+            "3. KHÔNG giải thích, KHÔNG lặp lại câu hỏi, KHÔNG thêm thông tin ngoài.\n"
+            "4. Nếu tài liệu không có thông tin, trả lời đúng 1 từ: UNKNOWN<|im_end|>\n"
+            "<|im_start|>user\n"
+            f"TÀI LIỆU:\n{context}\n\n"
+            f"CÂU HỎI: {query}<|im_end|>\n"
+            "<|im_start|>assistant\n"
+            "Câu trả lời:"
+        )
+
+        output = self.llm(
+            prompt,
+
+            max_tokens=self.max_new_tokens,
+
+            stop=[
+                "<|im_end|>",
+                "<|im_start|>",
+                "\n\n",
+                "Câu hỏi:",
+                "TÀI LIỆU:"
+            ],
+
+            echo=False,
+
+            temperature=0.1,
+
+            repeat_penalty=1.15
+        )
+
+        answer = output["choices"][0]["text"].strip()
+
+        if answer:
+            first_line = answer.split("\n")[0].strip()
+            return first_line if first_line else answer
+
+        return "UNKNOWN"

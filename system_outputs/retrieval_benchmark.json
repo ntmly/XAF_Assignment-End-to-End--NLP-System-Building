@@ -1,0 +1,12 @@
+{
+  "dense_only": {
+    "Recall@1": 0.38,
+    "Recall@3": 0.52,
+    "Recall@5": 0.54
+  },
+  "advanced_full": {
+    "Recall@1": 0.64,
+    "Recall@3": 0.84,
+    "Recall@5": 0.92
+  }
+}

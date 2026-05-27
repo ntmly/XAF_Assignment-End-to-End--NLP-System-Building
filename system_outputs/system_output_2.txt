@@ -1,103 +1,50 @@
-tạo
-2,00
-Thời gian nghỉ giữa hai tiết học là phút
-5
-Đối với học phần tự chọn có điều kiện
-Đối với các học phần đạt điểm D
-2022
-0 (không)
-Đối với các học phần bắt buộc
-đào tạo đã tích lũy
-khác can thiệp vào hệ thống đăng ký học
-Tích lũy đủ
-Tích lũy đủ
-22 3
-9
-9
-Sinh viên bắt buộc phải tích lũy
-thiếu trong học phần quy định
-Từ tháng 12 năm 2014
-khai danh sách sinh viên tốt nghiệp
-QUY CHẾ ĐÀO TẠO ĐẠI HỌC
-Thời gian khóa học đồng
-N ngày tháng năm của Giám đốc
-3
-22 3
-đăng ký học phần sẽ bị hủy học phần
-đơn vị
-10
-Đối với môn Giáo dục
-2015
-thi kết thúc học phần vào học kỳ sau
-35
-9
-Năm 1956
-QUY CHẾ ĐÀO TẠO ĐẠI HỌC
-Trường Công chính
-2006
-1993
-cải thiện điểm trung bình chung tích lũy
-của khóa học đạt từ 2,00 trở lên
-điểm trung bình chung các học phần và
-các chương trình đào tạo
-25 tháng 12 năm 2017
-điểm trung bình chung tích lũy
-Kết quả đánh giá học phần ngoại ngữ
-xếp hạng tốt nghiệp
-vượt quá lần liên tiếp
-2006
-xếp hạng tốt nghiệp
-và điểm trung bình chung tích lũy
-của
-9
-gian học từ mức khiển trách trở lên.
-cải thiện điểm trung bình chung tích lũy
-các đơn vị đào tạo
-của ĐHQGHN
-2006
-trong học kỳ
-Thủ tướng Chu Ân Lai
-khóa: - Chương trình đào tạo chuẩn
-tin sau
-học phần giáo dục thể chất
-cơ sở sử dụng người học sau tốt nghiệp
-Phát triển các chương trình đào tạo mới
-chuẩn đầu ra của chương trình đào tạo
-Hình thành mục tiêu
-vào điểm trung bình chung học kỳ
-khóa học từ đến dưới năm
-Năm 1999
-có mã tuyển sinh là CN2
-22 3
-Thời gian tối đa hoàn thành khóa
-Ghi chú: Trong trường hợp
-2006
-12
-Giảng dạy tại Ban
-16 tín chỉ đối với chất lượng cao
-Giám đốc trường Đại học Khoa học
-theo
-theo mức độ
-đã hình thành thương hiệu
-Chủ nhiệm Ủy ban Khoa học
-của trường
-Phòng ở đều dành cho học sinh
-tính
-thúc học phần vào học kỳ sau
-thời hạn nghỉ học tạm thời
-3
-Tích lũy đủ
-am hiểu chương trình đào tạo
-giáo sư của Đại học Quốc gia Việt Nam
-Trường hợp loại
-Năm 2010
-Đơn xin lùi thời hạn tốt nghiệp
-cơ sở sử dụng người học sau tốt nghiệp
-2026
-o Lệ phí xét tuyển theo SAT và
-2006
-theo các tổ hợp môn A00, A01, X06
-Tổ hợp A02 gồm Toán, Lý, Sinh
-có mã tuyển sinh là CN6
-44,000,000 đồng/năm học
-có mã tuyển sinh là CN9
+UNKNOWN
+UNKNOWN
+Bảo vệ và phát triển hệ thống giáo dục quốc gia.
+323
+Huân chương Sao Vàng
+UNKNOWN
+Phương thức xét tuyển mới
+Ban Điều hành Mạng lưới các trường đại học Đông Nam Á
+I
+UNKNOWN
+UNKNOWN
+1
+Đại học Quốc gia Việt Nam
+Sắc lệnh số 45/SL
+UNKNOWN
+Thanh Hóa
+UNKNOWN
+UNKNOWN
+Nguyễn Khánh Toàn
+1958
+UNKNOWN
+25 tháng 5 năm 2004
+UNKNOWN
+UNKNOWN
+UNKNOWN
+26 tháng 9 năm 1994
+QH-2006-T
+19 tháng 5 năm 2022
+1.400 tỷ đồng
+Victor Tardieu
+UNKNOWN
+Khoa Công nghệ Thông tin và Khoa Công nghệ Điện tử - Viễn thông
+TS. Đinh Triều Dương
+Học phần tiên quyết là học phần sinh viên phải tích lũy trước khi học một học phần khác.
+16 tín chỉ
+daotao_dhcn@vnu.edu.vn
+9 học kỳ chính
+Trung tâm Giáo dục thể chất và thể thao.
+A
+0
+5%
+Một giờ tín chỉ lý thuyết bằng một tiết học lý thuyết trên lớp.
+từ 1 đến tối thiểu là tín chỉ
+UNKNOWN
+bị kỷ luật từ mức đình chỉ học tập một năm đến buộc thôi học.
+25%
+60%
+QHI
+38,000,000 đồng/năm học.
+UNKNOWN

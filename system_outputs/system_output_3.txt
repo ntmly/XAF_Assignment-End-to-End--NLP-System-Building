@@ -1,103 +1,50 @@
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
-UNKNOWN
+QH
+1
+Đứng đầu phát triển nền giáo dục Việt Nam.
+323
+Huân chương Sao Vàng
+UNKNOWN
+Phương thức đánh giá năng lực.
+Ban điều hành Mạng lưới các trường đại học Đông Nam Á.
+I
+Thủ tướng Chính phủ
+16 tháng 5 năm 1906
+1
+Đại học Quốc gia Việt Nam
+Sắc lệnh số 45/SL
+15 tháng 11 năm 1945
+Thanh Hóa
+23 tháng 9 năm 2022
+Thủ tướng Phạm Văn Đồng
+Nguyễn Khánh Toàn
+14 tháng 8 năm 1967
+Ba
+18 tháng 12 năm 2018
+1.169 người
+Mức 2
+Bộ Giáo dục và Đào tạo.
+26 tháng 9 năm 1994
+Ký hiệu gồm: QH (ký hiệu Đại học Quốc gia Hà Nội) - năm nhập học - ký hiệu tên đơn vị.
+19 tháng 5 năm 2022
+UNKNOWN
+Victor Tardieu
+Đạt Huy chương Đồng tại Cuộc thi Lập trình Quốc tế cho Sinh viên (ICPC).
+Khoa Công nghệ được thành lập trên cơ sở sắp xếp, tổ chức lại Khoa Công nghệ Thông tin và Khoa Công nghệ Điện tử - Viễn thông của Trường Đại học Khoa học Tự nhiên.
+GS. TS. Lê Sỹ Vinh
+Học phần tiên quyết là học phần sinh viên phải tích lũy trước khi học một học phần khác.
+16 tín chỉ
+UNKNOWN
+9 học kỳ chính
+Trung tâm Giáo dục Thể chất và Thể thao
+A
+0
+5%
+Một giờ tín chỉ lý thuyết bằng một tiết học lý thuyết.
+từ 1 đến tối đa 3 tín chỉ.
+5
+UNKNOWN
+25%
+60%
+QHI
+38,000,000 đồng/năm học.
+27.05
