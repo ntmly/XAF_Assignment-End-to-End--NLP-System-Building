@@ -7,7 +7,8 @@ class GenerativeReader:
     def __init__(
         self,
         model_path: str,
-        max_new_tokens: int = 128
+        max_new_tokens: int = 128,
+        device: str = "cpu"
     ):
 
         BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,6 +24,10 @@ class GenerativeReader:
                 f"Không tìm thấy model tại: {MODEL_PATH}"
             )
 
+        self.device = device
+
+        gpu_layers = -1 if self.device == "cuda" else 0
+
         self.llm = Llama(
             model_path=str(MODEL_PATH),
 
@@ -32,6 +37,8 @@ class GenerativeReader:
             n_threads_batch=4,
 
             n_batch=64,
+
+            n_gpu_layers=gpu_layers,
 
             verbose=False
         )

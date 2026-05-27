@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VNU-UET RAG Chatbot</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue-900: #0a1628;
+    --blue-800: #0d2044;
+    --blue-700: #1a3a6b;
+    --blue-600: #1e4d8c;
+    --blue-500: #2563b0;
+    --blue-400: #3b82d4;
+    --blue-300: #60a5f7;
+    --blue-100: #dbeafe;
+    --accent:   #38bdf8;
+    --white:    #ffffff;
+    --gray-400: #94a3b8;
+    --gray-600: #475569;
+    --green:    #22c55e;
+    --red:      #ef4444;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background: var(--blue-900);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+  }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, var(--blue-800), var(--blue-700));
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+  .header-left { display: flex; align-items: center; gap: 14px; }
+  .logo {
+    width: 38px; height: 38px;
+    background: linear-gradient(135deg, var(--blue-400), var(--accent));
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 700; color: white;
+    box-shadow: 0 2px 12px rgba(56,189,248,0.4);
+  }
+  .header-title h1 { font-size: 15px; font-weight: 700; }
+  .header-title p  { font-size: 11px; color: var(--blue-300); margin-top: 1px; }
+  .header-right { display: flex; align-items: center; gap: 10px; }
+  .status-badge {
+    display: flex; align-items: center; gap: 6px;
+    background: rgba(56,189,248,0.12);
+    border: 1px solid rgba(56,189,248,0.25);
+    border-radius: 20px; padding: 5px 12px;
+    font-size: 11px; color: var(--accent); font-weight: 500;
+  }
+  .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
+  .status-dot.loading { background: #f59e0b; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+  /* Layout */
+  .main { display: flex; flex: 1; overflow: hidden; height: calc(100vh - 64px); }
+
+  /* Sidebar */
+  .sidebar {
+    width: 260px; flex-shrink: 0;
+    background: var(--blue-800);
+    border-right: 1px solid rgba(255,255,255,0.06);
+    display: flex; flex-direction: column;
+    padding: 16px 12px; gap: 4px; overflow-y: auto;
+  }
+  .sidebar-label {
+    font-size: 10px; font-weight: 600; color: var(--blue-300);
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 8px 8px 4px;
+  }
+  .sidebar-item {
+    padding: 9px 12px; border-radius: 8px; cursor: pointer;
+    font-size: 12.5px; color: var(--gray-400);
+    transition: all 0.15s; border: 1px solid transparent;
+  }
+  .sidebar-item:hover { background: rgba(255,255,255,0.05); color: var(--white); }
+  .sidebar-item.active { background: rgba(37,99,176,0.3); border-color: rgba(59,130,212,0.3); color: var(--blue-300); }
+  .sidebar-divider { height: 1px; background: rgba(255,255,255,0.06); margin: 6px 8px; }
+
+  .mode-box {
+    margin-top: auto;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px; padding: 12px;
+  }
+  .mode-box label { font-size: 10px; color: var(--blue-300); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; display: block; margin-bottom: 8px; }
+  .mode-box select {
+    width: 100%; background: var(--blue-700); color: var(--white);
+    border: 1px solid rgba(255,255,255,0.1); border-radius: 6px;
+    padding: 7px 10px; font-size: 12px; font-family: inherit; cursor: pointer; outline: none;
+  }
+
+  /* Stats bar */
+  .stats-bar {
+    background: rgba(255,255,255,0.03);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 6px 24px;
+    display: flex; gap: 20px; align-items: center;
+    font-size: 11px; color: var(--gray-400);
+    flex-shrink: 0;
+  }
+  .stat-item { display: flex; align-items: center; gap: 5px; }
+  .stat-value { color: var(--blue-300); font-weight: 600; }
+
+  /* Chat */
+  .chat-area { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+  .messages {
+    flex: 1; overflow-y: auto; padding: 20px 0;
+    display: flex; flex-direction: column; gap: 0;
+    scroll-behavior: smooth;
+  }
+  .messages::-webkit-scrollbar { width: 4px; }
+  .messages::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+
+  .message-row { display: flex; padding: 5px 24px; gap: 12px; animation: fadeUp 0.2s ease; }
+  .message-row.user { flex-direction: row-reverse; }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+
+  .avatar {
+    width: 32px; height: 32px; border-radius: 50%;
+    flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; margin-top: 2px;
+  }
+  .avatar.bot { background: linear-gradient(135deg, var(--blue-500), var(--accent)); box-shadow: 0 2px 8px rgba(56,189,248,0.3); }
+  .avatar.user { background: linear-gradient(135deg, #1e3a5f, #2d5b8e); color: var(--blue-300); border: 1px solid rgba(59,130,212,0.3); }
+
+  .msg-col { display: flex; flex-direction: column; max-width: 68%; }
+  .message-row.user .msg-col { align-items: flex-end; }
+
+  .bubble {
+    padding: 11px 15px; border-radius: 16px;
+    font-size: 13.5px; line-height: 1.65;
+  }
+  .bubble.bot {
+    background: var(--blue-800);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-top-left-radius: 4px; color: var(--white);
+  }
+  .bubble.user {
+    background: linear-gradient(135deg, var(--blue-600), var(--blue-500));
+    border-top-right-radius: 4px; color: var(--white);
+    box-shadow: 0 2px 12px rgba(30,77,140,0.4);
+  }
+  .bubble.error { background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.3); color: #fca5a5; }
+
+  .bubble-meta {
+    font-size: 10px; color: var(--gray-400);
+    margin-top: 4px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  }
+  .message-row.user .bubble-meta { justify-content: flex-end; }
+
+  .source-chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+  .source-chip {
+    background: rgba(56,189,248,0.08);
+    border: 1px solid rgba(56,189,248,0.18);
+    color: var(--accent); font-size: 10px;
+    padding: 3px 9px; border-radius: 10px; font-weight: 500;
+    cursor: pointer; transition: background 0.15s;
+  }
+  .source-chip:hover { background: rgba(56,189,248,0.16); }
+
+  .retrieved-panel {
+    margin-top: 10px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px; overflow: hidden;
+    display: none;
+  }
+  .retrieved-panel.open { display: block; }
+  .retrieved-panel-header {
+    padding: 8px 12px; font-size: 11px; color: var(--blue-300);
+    font-weight: 600; border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .retrieved-chunk {
+    padding: 8px 12px; font-size: 11.5px; color: var(--gray-400);
+    border-bottom: 1px solid rgba(255,255,255,0.04); line-height: 1.5;
+  }
+  .retrieved-chunk:last-child { border-bottom: none; }
+  .chunk-idx { color: var(--blue-300); font-weight: 600; margin-right: 6px; }
+
+  /* Typing */
+  .typing-bubble { display: flex; align-items: center; gap: 5px; padding: 14px 18px; }
+  .typing-dot { width: 7px; height: 7px; background: var(--blue-400); border-radius: 50%; animation: typing 1.2s infinite; }
+  .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+  .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes typing { 0%,80%,100%{transform:scale(0.7);opacity:0.4} 40%{transform:scale(1);opacity:1} }
+
+  /* Welcome */
+  .welcome { text-align: center; padding: 36px 24px; animation: fadeUp 0.4s ease; }
+  .welcome-icon {
+    width: 64px; height: 64px;
+    background: linear-gradient(135deg, var(--blue-600), var(--blue-400));
+    border-radius: 20px; display: flex; align-items: center; justify-content: center;
+    font-size: 28px; margin: 0 auto 16px;
+    box-shadow: 0 8px 32px rgba(37,99,176,0.4);
+  }
+  .welcome h2 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+  .welcome p { font-size: 13px; color: var(--gray-400); max-width: 380px; margin: 0 auto 24px; line-height: 1.6; }
+  .suggestions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; max-width: 560px; margin: 0 auto; }
+  .chip {
+    background: var(--blue-800); border: 1px solid rgba(59,130,212,0.25);
+    color: var(--blue-300); padding: 7px 13px; border-radius: 20px;
+    font-size: 12px; cursor: pointer; transition: all 0.15s; font-family: inherit;
+  }
+  .chip:hover { background: var(--blue-700); border-color: var(--blue-400); color: var(--white); transform: translateY(-1px); }
+
+  /* Input */
+  .input-bar {
+    padding: 14px 24px 18px;
+    background: var(--blue-900);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    flex-shrink: 0;
+  }
+  .input-wrap {
+    display: flex; gap: 10px; align-items: flex-end;
+    background: var(--blue-800);
+    border: 1px solid rgba(59,130,212,0.25);
+    border-radius: 14px; padding: 10px 10px 10px 16px;
+    transition: border-color 0.2s;
+  }
+  .input-wrap:focus-within { border-color: var(--blue-400); box-shadow: 0 0 0 3px rgba(37,99,176,0.2); }
+  #userInput {
+    flex: 1; background: transparent; border: none; outline: none;
+    color: var(--white); font-size: 13.5px; font-family: inherit;
+    resize: none; max-height: 120px; line-height: 1.5; padding: 2px 0;
+  }
+  #userInput::placeholder { color: var(--gray-400); }
+  .send-btn {
+    width: 36px; height: 36px;
+    background: linear-gradient(135deg, var(--blue-500), var(--blue-400));
+    border: none; border-radius: 10px; color: white; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; transition: all 0.15s;
+    box-shadow: 0 2px 8px rgba(37,99,176,0.4);
+  }
+  .send-btn:hover { transform: scale(1.05); background: linear-gradient(135deg, var(--blue-400), var(--accent)); }
+  .send-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+  .input-hint { font-size: 10.5px; color: var(--gray-400); margin-top: 7px; text-align: center; }
+
+  /* Processing indicator */
+  #processingBar {
+    display: none; padding: 6px 24px;
+    background: rgba(56,189,248,0.08);
+    border-bottom: 1px solid rgba(56,189,248,0.15);
+    font-size: 11px; color: var(--accent);
+    align-items: center; gap: 8px;
+  }
+  #processingBar.show { display: flex; }
+  .spinner {
+    width: 12px; height: 12px; border: 2px solid rgba(56,189,248,0.3);
+    border-top-color: var(--accent); border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <div class="logo">V</div>
+    <div class="header-title">
+      <h1>VNU-UET RAG Assistant</h1>
+      <p>Advanced Hybrid Retrieval-Augmented Generation</p>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="status-badge">
+      <span class="status-dot" id="statusDot"></span>
+      <span id="statusText">Đang kết nối...</span>
+    </div>
+  </div>
+</header>
+
+<div class="main">
+  <div class="sidebar">
+    <div class="sidebar-label">Gợi ý câu hỏi</div>
+    <div class="sidebar-item" onclick="fillQ(this)">🏫 VNU thành lập năm nào?</div>
+    <div class="sidebar-item" onclick="fillQ(this)">📋 Điểm chuẩn CNTT 2025?</div>
+    <div class="sidebar-item" onclick="fillQ(this)">💰 Học phí ngành AI 2026?</div>
+    <div class="sidebar-item" onclick="fillQ(this)">📚 Điều kiện tốt nghiệp?</div>
+    <div class="sidebar-item" onclick="fillQ(this)">⚠️ Cảnh báo học vụ khi nào?</div>
+    <div class="sidebar-item" onclick="fillQ(this)">🔑 Mã cơ sở UET là gì?</div>
+    <div class="sidebar-item" onclick="fillQ(this)">📧 Email Phòng Đào tạo UET?</div>
+    <div class="sidebar-item" onclick="fillQ(this)">🏆 Điểm thưởng NCKH giải nhất?</div>
+
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-label">Hệ thống</div>
+    <div class="mode-box">
+      <label>Chế độ Retrieval</label>
+      <select id="modeSelect">
+        <option value="advanced_full">🔀 Advanced Hybrid</option>
+        <option value="dense_only">🔍 Dense (FAISS)</option>
+        <option value="baseline0">📝 Baseline (BM25)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="chat-area">
+    <div class="stats-bar" id="statsBar">
+      <div class="stat-item">📦 Chunks: <span class="stat-value" id="statChunks">—</span></div>
+      <div class="stat-item">❓ Đã hỏi: <span class="stat-value" id="statQueries">0</span></div>
+      <div class="stat-item">⚡ Phản hồi cuối: <span class="stat-value" id="statTime">—</span></div>
+      <div class="stat-item">🔀 Mode: <span class="stat-value" id="statMode">—</span></div>
+    </div>
+
+    <div id="processingBar">
+      <div class="spinner"></div>
+      <span id="processingText">Đang xử lý câu hỏi...</span>
+    </div>
+
+    <div class="messages" id="messages">
+      <div class="welcome" id="welcome">
+        <div class="welcome-icon">🎓</div>
+        <h2>Xin chào! Tôi là VNU-UET Assistant</h2>
+        <p>Hỏi tôi về lịch sử VNU, tuyển sinh, học phí, quy chế đào tạo và nhiều hơn nữa.</p>
+        <div class="suggestions">
+          <button class="chip" onclick="sendChip(this)">VNU thành lập năm nào?</button>
+          <button class="chip" onclick="sendChip(this)">Điểm chuẩn CNTT 2025?</button>
+          <button class="chip" onclick="sendChip(this)">Học phí ngành AI 2026?</button>
+          <button class="chip" onclick="sendChip(this)">Điều kiện tốt nghiệp?</button>
+          <button class="chip" onclick="sendChip(this)">Cảnh báo học vụ khi nào?</button>
+          <button class="chip" onclick="sendChip(this)">Mã cơ sở UET là gì?</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-bar">
+      <div class="input-wrap">
+        <textarea id="userInput" rows="1"
+          placeholder="Nhập câu hỏi về VNU-UET..."
+          onkeydown="handleKey(event)"
+          oninput="autoResize(this)"></textarea>
+        <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+      <div class="input-hint">Enter để gửi · Shift+Enter xuống dòng · ~10-20s để xử lý</div>
+    </div>
+  </div>
+</div>
+
+<script>
+let queryCount = 0;
+let isWaiting = false;
+
+// ── Kiểm tra kết nối server ──────────────────────────────────────────────
+async function checkHealth() {
+  try {
+    const r = await fetch('/health');
+    const d = await r.json();
+    document.getElementById('statusDot').className = 'status-dot';
+    document.getElementById('statusText').textContent = 'Sẵn sàng';
+    document.getElementById('statChunks').textContent = d.chunks.toLocaleString();
+  } catch {
+    document.getElementById('statusDot').style.background = '#ef4444';
+    document.getElementById('statusText').textContent = 'Mất kết nối';
+  }
+}
+checkHealth();
+
+function fillQ(el) {
+  const text = el.textContent.replace(/^[^\s]+\s/, '');
+  document.getElementById('userInput').value = text;
+  document.getElementById('userInput').focus();
+}
+
+function sendChip(btn) {
+  document.getElementById('userInput').value = btn.textContent;
+  sendMessage();
+}
+
+function autoResize(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+}
+
+function handleKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+}
+
+function getTime() {
+  return new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+}
+
+function getModeLabel(mode) {
+  return { advanced_full: 'Advanced Hybrid', dense_only: 'Dense (FAISS)', baseline0: 'Baseline (BM25)' }[mode] || mode;
+}
+
+function appendUserMsg(text) {
+  const welcome = document.getElementById('welcome');
+  if (welcome) welcome.remove();
+  const msgs = document.getElementById('messages');
+  msgs.innerHTML += `
+    <div class="message-row user">
+      <div class="avatar user">B</div>
+      <div class="msg-col">
+        <div class="bubble user">${escHtml(text)}</div>
+        <div class="bubble-meta">${getTime()}</div>
+      </div>
+    </div>`;
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function appendBotMsg(answer, retrieved, mode, elapsed, isError) {
+  const msgs = document.getElementById('messages');
+  const id = 'ret-' + Date.now();
+  const modeLabel = getModeLabel(mode);
+  const bubbleClass = isError ? 'bubble bot error' : 'bubble bot';
+
+  let retrievedHTML = '';
+  if (retrieved && retrieved.length > 0 && !isError) {
+    const chunks = retrieved.map((c, i) =>
+      `<div class="retrieved-chunk"><span class="chunk-idx">#${i+1}</span>${escHtml(c.text)}...</div>`
+    ).join('');
+    retrievedHTML = `
+      <div class="source-chips">
+        <span class="source-chip" onclick="togglePanel('${id}')">📎 ${retrieved.length} chunks retrieved</span>
+      </div>
+      <div class="retrieved-panel" id="${id}">
+        <div class="retrieved-panel-header">📄 Chunks được retrieve</div>
+        ${chunks}
+      </div>`;
+  }
+
+  msgs.innerHTML += `
+    <div class="message-row bot">
+      <div class="avatar bot">AI</div>
+      <div class="msg-col">
+        <div class="${bubbleClass}">
+          ${escHtml(answer)}
+          ${retrievedHTML}
+        </div>
+        <div class="bubble-meta">
+          ${getTime()} · <span style="color:var(--blue-300)">${modeLabel}</span>
+          ${elapsed ? `· ⚡ ${elapsed}s` : ''}
+        </div>
+      </div>
+    </div>`;
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function showTyping() {
+  const msgs = document.getElementById('messages');
+  msgs.innerHTML += `
+    <div class="message-row bot" id="typing-row">
+      <div class="avatar bot">AI</div>
+      <div class="bubble bot typing-bubble">
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+      </div>
+    </div>`;
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function hideTyping() {
+  const el = document.getElementById('typing-row');
+  if (el) el.remove();
+}
+
+function togglePanel(id) {
+  const el = document.getElementById(id);
+  if (el) el.classList.toggle('open');
+}
+
+function escHtml(str) {
+  return String(str)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function setProcessing(text) {
+  const bar = document.getElementById('processingBar');
+  document.getElementById('processingText').textContent = text;
+  bar.classList.add('show');
+  document.getElementById('statusDot').className = 'status-dot loading';
+  document.getElementById('statusText').textContent = 'Đang xử lý...';
+}
+
+function clearProcessing() {
+  document.getElementById('processingBar').classList.remove('show');
+  document.getElementById('statusDot').className = 'status-dot';
+  document.getElementById('statusText').textContent = 'Sẵn sàng';
+}
+
+async function sendMessage() {
+  if (isWaiting) return;
+  const input = document.getElementById('userInput');
+  const query = input.value.trim();
+  if (!query) return;
+
+  const mode = document.getElementById('modeSelect').value;
+
+  appendUserMsg(query);
+  input.value = '';
+  input.style.height = 'auto';
+  document.getElementById('sendBtn').disabled = true;
+  isWaiting = true;
+  queryCount++;
+
+  showTyping();
+  setProcessing('Đang retrieve chunks liên quan...');
+
+  const t0 = Date.now();
+
+  try {
+    // Cập nhật status sau 2s
+    setTimeout(() => {
+      if (isWaiting) setProcessing('Đang sinh câu trả lời (model đang chạy)...');
+    }, 2000);
+
+    const res = await fetch('/ask', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query, mode })
+    });
+
+    const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
+    const data = await res.json();
+
+    hideTyping();
+    clearProcessing();
+
+    if (data.error) {
+      appendBotMsg('Lỗi: ' + data.error, null, mode, elapsed, true);
+    } else {
+      appendBotMsg(data.answer, data.retrieved, data.mode, elapsed, false);
+      // Cập nhật stats
+      document.getElementById('statQueries').textContent = queryCount;
+      document.getElementById('statTime').textContent = elapsed + 's';
+      document.getElementById('statMode').textContent = getModeLabel(mode);
+    }
+
+  } catch (err) {
+    hideTyping();
+    clearProcessing();
+    appendBotMsg('Không thể kết nối server. Đảm bảo app.py đang chạy.', null, mode, null, true);
+  }
+
+  isWaiting = false;
+  document.getElementById('sendBtn').disabled = false;
+}
+</script>
+</body>
+</html>

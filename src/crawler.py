@@ -14,9 +14,6 @@ class WikiCrawler:
             "User-Agent": "Mozilla/5.0 (RAG-Crawler)"
         })
 
-    # =========================
-    # GET FULL WIKI TEXT (NO FILTER)
-    # =========================
     def get_full_text(self, title: str) -> str:
         url = "https://vi.wikipedia.org/w/api.php"
 
@@ -51,9 +48,6 @@ class WikiCrawler:
             print(f"[ERROR] {title}: {e}")
             return ""
 
-    # =========================
-    # UET + VNU ONLY
-    # =========================
     def crawl_vnu_uet(self):
         docs = []
 
@@ -68,9 +62,6 @@ class WikiCrawler:
 
         return docs
 
-    # =========================
-    # SAVE
-    # =========================
     def save(self, docs):
         path = os.path.join(self.output_dir, "raw_docs.json")
 

@@ -1,9 +1,6 @@
 import re
 from typing import Dict
 
-# ============================================================
-# VIẾT TẮT — khớp với từ khoá thực tế trong chunks.json
-# ============================================================
 ACRONYM_DICT: Dict[str, str] = {
 
     # ----- Tên trường -----
@@ -64,7 +61,7 @@ ACRONYM_DICT: Dict[str, str] = {
 }
 
 # ============================================================
-# TỪ ĐỒNG NGHĨA — mở rộng query cho BM25 tìm đúng hơn
+# TỪ ĐỒNG NGHĨA 
 # ============================================================
 SYNONYM_DICT: Dict[str, str] = {
 
@@ -127,9 +124,8 @@ def preprocess_query(query: str) -> str:
     """
     # 1. Chuẩn hóa
     query = query.strip()
-    query = re.sub(r'\s+', ' ', query)            # nhiều khoảng trắng → 1
-    query = re.sub(r'[?!。？！]+$', '', query).strip()  # bỏ dấu hỏi/chấm than cuối
-
+    query = re.sub(r'\s+', ' ', query)       
+    query = re.sub(r'[?!。？！]+$', '', query).strip() 
     query_lower = query.lower()
 
     # 2. Mở rộng viết tắt (case-insensitive)

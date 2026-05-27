@@ -17,7 +17,6 @@ def split_text_by_sentences(text: str, max_len: int, overlap_len: int) -> List[s
         else:
             if current_chunk:
                 chunks.append(' '.join(current_chunk))
-            # Overlap: lấy một số câu cuối của chunk trước
             overlap_sents = []
             overlap_len_sofar = 0
             for s in reversed(current_chunk):
@@ -33,7 +32,6 @@ def split_text_by_sentences(text: str, max_len: int, overlap_len: int) -> List[s
     return chunks
 
 def process_chunks(input_file: str, output_file: str, chunk_size: int, chunk_overlap: int):
-    """Đọc các chunks cũ (có thể có title), chia nhỏ text, giữ nguyên title."""
     with open(input_file, 'r', encoding='utf-8') as f:
         old_chunks = json.load(f)
     

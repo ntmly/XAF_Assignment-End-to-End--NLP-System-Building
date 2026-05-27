@@ -76,7 +76,7 @@ def run_benchmark(mode, ground_truth, embedder, indexer,
 
     ks = [1, 3, 5]
     scores = {k: [] for k in ks}
-    miss_details = []   # thu thập câu miss để in
+    miss_details = []  
 
     for item in ground_truth:
         query_raw   = item["question"]
@@ -139,7 +139,6 @@ def run_benchmark(mode, ground_truth, embedder, indexer,
             rel_words = set(" ".join(m["relevant_texts"]).lower().split())
             overlap = len(q_words & rel_words) / max(len(q_words), 1)
 
-            # Nếu overlap từ giữa query và chunk relevant < 30% → keyword miss
             if overlap < 0.3:
                 keyword_miss += 1
                 print(f"  [KEYWORD MISS] overlap={overlap:.2f} — "

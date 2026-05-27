@@ -24,7 +24,7 @@ class CPUReader:
             score = result['score']
             
             # Lọc câu trả lời kém chất lượng
-            if result['score'] < 0.05:   # chỉ lọc điểm quá thấp, không giới hạn độ dài
+            if result['score'] < 0.05:  
                 return "UNKNOWN"
             return answer
         except Exception as e:
