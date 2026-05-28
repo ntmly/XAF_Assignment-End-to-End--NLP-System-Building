@@ -4,98 +4,107 @@
 
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/RAG-Hệ_thống-blue?style=for-the-badge">
-  <img src="https://img.shields.io/badge/FAISS-Dense-orange?style=for-the-badge">
-  <img src="https://img.shields.io/badge/BM25-Sparse-green?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Qwen-LLM-red?style=for-the-badge">
-  <img src="https://img.shields.io/badge/NLP-End--to--End-purple?style=for-the-badge">
-</p>
+# XAF_Assignment-End-to-End--NLP-System-Building
+
+# Hệ thống RAG Nâng cao cho miền Trường học (ĐHQGHN, UET)
+
+Dự án xây dựng một pipeline **Retrieval-Augmented Generation (RAG)** cho miền dữ liệu giáo dục, hỗ trợ trả lời các câu hỏi về Đại học Quốc gia Hà Nội (VNU), Trường Đại học Công nghệ (UET) và các quy chế đào tạo.
+
+Hệ thống tích hợp các kỹ thuật hiện đại:
+
+* Hybrid Retrieval (BM25 + Dense Retrieval)
+* FAISS Vector Search
+* Query Rewriting bằng LLM
+* Reciprocal Rank Fusion (RRF)
+* Generative Reader (Qwen2.5-3B)
+* Evaluation đầy đủ cho Retrieval + QA
 
 ---
 
-# 🚀 Hệ thống RAG Nâng cao cho UET (VNU)
-
-Dự án xây dựng một hệ thống **Retrieval-Augmented Generation (RAG)** cho miền dữ liệu giáo dục, hỗ trợ trả lời câu hỏi về Đại học Quốc gia Hà Nội (VNU), Trường Đại học Công nghệ (UET) và quy chế đào tạo.
-
-Hệ thống kết hợp các kỹ thuật hiện đại:
-
-* 🔍 BM25 Sparse Retrieval
-* 🧠 Dense Retrieval (FAISS + Embedding)
-* 🔁 Query Rewriting bằng LLM
-* ⚡ Reciprocal Rank Fusion (RRF)
-* 🤖 Generative Reader (Qwen2.5-3B)
-
----
-
-# ⚙️ Kiến trúc hệ thống
+# 🚀 Kiến trúc hệ thống
 
 ```text
 Câu hỏi đầu vào
-   │
-   ▼
-Tiền xử lý câu hỏi
-   │
-   ▼
-Query Rewriting (LLM)
-   │
-   ▼
-Hybrid Retrieval
-   ├── BM25
-   └── FAISS Dense Search
-   │
-   ▼
-RRF Fusion + Ranking
-   │
-   ▼
-Top-K Chunks (K=5)
-   │
-   ▼
-Qwen2.5-3B Reader
-   │
-   ▼
-Câu trả lời cuối cùng
+│
+▼
+[1. Query Preprocessing]
+(Chuẩn hóa + mở rộng từ viết tắt)
+│
+▼
+[2. Query Rewriting]
+(Sinh nhiều biến thể câu hỏi)
+│
+▼
+[3. Multi-Retrieval]
+├── BM25 Retrieval
+└── Dense Retrieval (FAISS + Embedding)
+│
+▼
+[4. Reciprocal Rank Fusion (RRF)]
+│
+▼
+[5. Hybrid Ranking (alpha = 0.5)]
+│
+▼
+[6. Top-5 Chunks Selection]
+│
+▼
+[7. Generative Reader (Qwen2.5-3B)]
+│
+▼
+[8. Final Answer]
+(hoặc "UNKNOWN")
 ```
 
 ---
 
-# 📁 Cấu trúc dự án
+# 📁 Cấu trúc thư mục
 
-```
+```text
 .
+├── config.yaml
+├── requirements.txt
+├── run_all.bat
+├── contributions.md
+├── README.md
+│
 ├── data/
-│   ├── raw/                  # dữ liệu gốc
+│   ├── raw/                  # (chưa crawl / dữ liệu gốc)
 │   ├── processed/
 │   │   └── chunks.json
+│   │
 │   └── test/
 │       ├── questions.txt
 │       ├── reference_answers.txt
 │       └── retrieval_ground_truth.json
 │
 ├── models/
+│
 ├── system_outputs/
 │   ├── QA_benchmark.json
 │   ├── retrieval_benchmark.json
 │   ├── system_output_1.txt
 │   ├── system_output_2.txt
-│   └── system_output_3.txt
+│   ├── system_output_3.txt
 │
 └── src/
     ├── crawler.py
     ├── chunking.py
+    ├── query_processing.py
     ├── indexer.py
     ├── retriever.py
     ├── reranker.py
-    ├── query_rewriter.py
     ├── generative_reader.py
-    ├── eval_retrieval.py
+    ├── query_rewriter.py
+    ├── rrf.py
     ├── evaluate.py
+    ├── eval_retrieval.py
     └── main.py
 ```
 
 ---
 
-# 🚀 Cài đặt
+# ⚙️ Cài đặt
 
 ## 1. Tạo môi trường
 
@@ -104,9 +113,7 @@ python -m venv rag_env
 rag_env\Scripts\activate
 ```
 
----
-
-## 2. Cài thư viện
+## 2. Cài dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -116,12 +123,29 @@ pip install -r requirements.txt
 
 # 🤖 Mô hình sử dụng
 
-* Embedding: `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`
-* Reader: `Qwen2.5-3B-Instruct (GGUF quantized)`
+## Embedding model
+
+```text
+sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+```
+
+## Reader model
+
+```text
+Qwen/Qwen2.5-3B-Instruct (quantized GGUF)
+```
 
 ---
 
 # 📚 Chuẩn bị dữ liệu
+
+## Dữ liệu gốc
+
+```text
+data/raw/
+```
+
+## Tạo chunks
 
 ```bash
 python src/chunking.py
@@ -129,7 +153,7 @@ python src/chunking.py
 
 Output:
 
-```
+```text
 data/processed/chunks.json
 ```
 
@@ -137,51 +161,66 @@ data/processed/chunks.json
 
 # ▶️ Chạy hệ thống
 
-## 🔹 Advanced pipeline
+## Dense-only baseline
 
 ```bash
-python src/main.py --mode advanced_full
-```
-
-## 🔹 Dense baseline
-
-```bash
-python src/main.py --mode dense_only
-```
-
-## 🔹 BM25 baseline
-
-```bash
-python src/main.py --mode baseline0
+python src/main.py \
+--mode dense_only \
+--input data/test/questions.txt \
+--output system_outputs/system_output_2.txt
 ```
 
 ---
 
-# 📊 Đánh giá QA (EM / F1)
+## Advanced full pipeline
 
 ```bash
-python src/evaluate.py
+python src/main.py \
+--mode advanced_full \
+--input data/test/questions.txt \
+--output system_outputs/system_output_1.txt
 ```
-
-## 📌 Kết quả
-
-| System        | EM            | F1            |
-| ------------- | ------------- | ------------- |
-| FAISS Only    | 0.1800        | 0.3925        |
-| Dense Only    | 0.2200        | 0.5250        |
-| Advanced Full | 🚀 **0.2400** | 🚀 **0.6037** |
 
 ---
 
-# 🔍 Benchmark Retrieval
+## Baseline BM25
 
-## Chạy đánh giá
+```bash
+python src/main.py \
+--mode baseline0 \
+--input data/test/questions.txt \
+--output system_outputs/system_output_3.txt
+```
+
+---
+
+# 📊 Evaluation QA (EM / F1)
+
+```bash
+python src/evaluate.py \
+--pred system_outputs/system_output_1.txt \
+--gold data/test/reference_answers.txt
+```
+
+## Kết quả QA
+
+| System        | EM         | F1         |
+| ------------- | ---------- | ---------- |
+| FAISS Only    | 0.1800     | 0.3925     |
+| Dense Only    | 0.2200     | 0.5250     |
+| Advanced Full | **0.2400** | **0.6037** |
+
+---
+
+# 🔍 Retrieval Benchmark
+
+## Chạy evaluation retrieval
 
 ```bash
 python src/eval_retrieval.py
 ```
 
-## Debug lỗi retrieval
+## Debug miss retrieval
 
 ```bash
 python src/eval_retrieval.py --debug_miss
@@ -196,46 +235,68 @@ python src/eval_retrieval.py --mode advanced_full
 
 ---
 
-## 📌 Kết quả Retrieval
+## 📊 Kết quả Retrieval
 
-| System        | Recall@1    | Recall@3    | Recall@5    |
-| ------------- | ----------- | ----------- | ----------- |
-| Dense Only    | 0.38        | 0.52        | 0.54        |
-| Advanced Full | 🚀 **0.64** | 🚀 **0.84** | 🚀 **0.92** |
+| System        | Recall@1 | Recall@3 | Recall@5 |
+| ------------- | -------- | -------- | -------- |
+| Dense Only    | 0.38     | 0.52     | 0.54     |
+| Advanced Full | **0.64** | **0.84** | **0.92** |
 
 ---
 
-# 🧠 Nhận xét
+# 🧠 Phân tích kết quả
 
-* Hybrid Retrieval cải thiện mạnh Recall@K
-* Query Rewriting giúp xử lý câu hỏi mơ hồ
-* RRF giúp ổn định ranking
-* Advanced system đạt:
+* Dense retrieval cho semantic matching tốt hơn BM25
+* Hybrid retrieval + RRF cải thiện mạnh Recall@K
+* Query rewriting giúp tăng recall với câu hỏi mơ hồ
+* Advanced pipeline đạt:
 
   * Recall@5 = **0.92**
   * F1 = **0.6037**
 
 ---
 
-# 📦 Output hệ thống
+# 🧪 Output hệ thống
+
+## QA outputs
 
 * `system_output_1.txt` → Advanced Full
-
 * `system_output_2.txt` → Dense Only
+* `system_output_3.txt` → BM25 / baseline
 
-* `system_output_3.txt` → BM25 baseline
+## Benchmark outputs
 
-* `QA_benchmark.json` → kết quả QA
-
-* `retrieval_benchmark.json` → kết quả retrieval
+* `QA_benchmark.json` → kết quả EM/F1
+* `retrieval_benchmark.json` → Recall@K
 
 ---
 
-# 📄 Dataset
+# 📄 Evaluation dataset
 
-* `questions.txt`
-* `reference_answers.txt`
-* `retrieval_ground_truth.json`
+## Test set
+
+* `questions.txt` → câu hỏi đầu vào
+* `reference_answers.txt` → ground truth QA
+* `retrieval_ground_truth.json` → ground truth retrieval
+
+---
+
+# 📌 Thành phần hệ thống
+
+| File                 | Vai trò                 |
+| -------------------- | ----------------------- |
+| crawler.py           | Thu thập dữ liệu        |
+| chunking.py          | Tạo chunks              |
+| query_processing.py  | Tiền xử lý query        |
+| indexer.py           | BM25 + FAISS            |
+| retriever.py         | Hybrid retrieval        |
+| reranker.py          | Cross-encoder reranking |
+| query_rewriter.py    | Query expansion         |
+| rrf.py               | Fusion ranking          |
+| generative_reader.py | Sinh câu trả lời        |
+| eval_retrieval.py    | Đánh giá Recall@K       |
+| evaluate.py          | Đánh giá QA             |
+| main.py              | Pipeline chính          |
 
 ---
 
@@ -244,9 +305,3 @@ python src/eval_retrieval.py --mode advanced_full
 * Nguyễn Thị Thanh Huyền — 23020381
 * Nguyễn Thị Minh Ly — 23020399
 * Đặng Minh Nguyệt — 23020407
-
----
-
-# ⭐ Kết luận
-
-Hệ thống thể hiện một pipeline **RAG hoàn chỉnh từ retrieval đến generation**, kết hợp IR cổ điển và LLM hiện đại.
