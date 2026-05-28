@@ -103,7 +103,6 @@
 - Thảo luận hướng tiếp cận hệ thống RAG
 - Thiết kế kiến trúc tổng thể
 - Kiểm thử và sửa lỗi pipeline
-- Thảo luận lựa chọn mô hình phù hợp với CPU
+- Thảo luận lựa chọn mô hình phù hợp
 - Hoàn thiện tài liệu README
-- Chuẩn bị slide và báo cáo cuối kỳ
 ```
