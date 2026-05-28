@@ -4,8 +4,6 @@
 
 </p>
 
-# XAF_Assignment-End-to-End--NLP-System-Building
-
 # Hệ thống RAG Nâng cao cho miền Trường học (ĐHQGHN, UET)
 
 Dự án xây dựng một pipeline **Retrieval-Augmented Generation (RAG)** cho miền dữ liệu giáo dục, hỗ trợ trả lời các câu hỏi về Đại học Quốc gia Hà Nội (VNU), Trường Đại học Công nghệ (UET) và các quy chế đào tạo.
