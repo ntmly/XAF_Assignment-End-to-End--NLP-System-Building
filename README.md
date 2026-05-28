@@ -298,6 +298,14 @@ python src/eval_retrieval.py --mode advanced_full
 
 ---
 
+# 📄 Tài liệu liên quan
+
+| Tài liệu           | Mô tả                                   |
+| ------------------ | --------------------------------------- |
+| `contributions.md` | Phân công công việc giữa các thành viên |
+
+---
+
 # 👥 Nhóm thực hiện
 
 * Nguyễn Thị Thanh Huyền — 23020381
