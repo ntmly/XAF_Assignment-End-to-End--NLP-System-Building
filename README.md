@@ -1,6 +1,6 @@
 <p align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?size=24&center=true&vCenter=true&width=900&lines=🚀+Hệ+thống+RAG+cho+UET+%28VNU%29;BM25+%2B+FAISS+Hybrid+Retrieval;Qwen2.5-3B+cho+hệ+thống+QA;XAF_Assignment-End-to-End--NLP-System-Building" />
+<img src="https://readme-typing-svg.herokuapp.com?size=26&center=true&vCenter=true&width=1000&color=00F5FF&background=0B2D4D&lines=📦+XAF_Assignment-End-to-End--NLP-System-Building;🚀+Retrieval-Augmented+Generation+System;🔎+Hybrid+Search+%7C+BM25+%2B+FAISS;🧠+Qwen2.5-3B+Language+Model;📚+End-to-End+NLP+Pipeline+for+VNU-UET" />
 
 </p>
 
